@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import PasswordSection from './components/PasswordSection';
+import PasswordSection from './components/PasswordSection/PasswordSection.jsx';
 import Header from './components/Header';
 import FAQ from './components/FAQ';
 
