@@ -1,3 +1,9 @@
+import './PasswordSection.css';
+import Input from "./Input";
+import Evaluations from "./Evaluations";
+import HIBP from "./HIBP";
+import Suggestions from "./Suggestions";
+
 function PasswordSection() {
   return (
     <section
@@ -6,7 +12,12 @@ function PasswordSection() {
       <div
         className="password-content"
       >
-        test
+        <Input />
+        <Evaluations />
+        <div className="bottom-section">
+          <HIBP />
+          <Suggestions />
+        </div>
       </div>
     </section>
   );

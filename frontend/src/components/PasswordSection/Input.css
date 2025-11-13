@@ -1,0 +1,28 @@
+.input-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    color: white;
+    border-radius: 8px;
+    border-color: #b71616e0;
+    font-family: 'Avenir', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 2rem;
+    background-color: #353b4780;
+}
+
+.input {
+    width: 15vw;
+    padding: 1rem 8rem;
+    font-size: 1rem;
+    background-color: #f5f7f972;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.input::placeholder {
+    font-style: italic;
+    color: #c0c0c0;
+}

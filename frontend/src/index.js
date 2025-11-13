@@ -1,15 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import PasswordSection from './components/PasswordSection/PasswordSection.jsx';
-import Header from './components/Header';
-import FAQ from './components/FAQ';
+import App from './components/App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Header />
-    <PasswordSection />
-    < FAQ />
+    <App />
   </React.StrictMode>
 );
