@@ -1,7 +1,9 @@
+import './common.css';
+
 function Header() {
     return (
         <header>
-            <h1>Header</h1>
+            Header Placeholder
         </header>
     );
 }

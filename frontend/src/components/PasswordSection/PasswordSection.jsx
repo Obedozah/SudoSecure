@@ -6,14 +6,13 @@ import Suggestions from "./Suggestions";
 
 function PasswordSection() {
   return (
-    <section
-      className="password-section"
-    >
-      <div
-        className="password-content"
-      >
+    <section className="password-section">
+      {/*Password Strength Checker Section wo/background*/}
+      <div className="password-content">
         <Input />
         <Evaluations />
+
+        {/*Have I Been Pwned/Suggestion Boxes*/}
         <div className="bottom-section">
           <HIBP />
           <Suggestions />
