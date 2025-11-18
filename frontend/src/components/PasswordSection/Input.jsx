@@ -1,21 +1,29 @@
+import React, { useState } from "react";
 import './Input.css';
 
-function toggleVisibility {
-    if image
-}
+function Input({ value, setValue }) {
+    const [visible, setVisibility] = useState(false);
+    function toggleVisibility() {
+        setVisibility(!visible);
+    }
 
-function Input() {
     return (
         <section className="input-section">
             Test Your Password
             <div className="input-box">
-                <input type={visible ? "text" : "password"}
-                    className="input" placeholder="Enter your password">
+                <input
+                    type={visible ? "text" : "password"}
+                    className="input"
+                    placeholder="Enter your password"
+                    value={value}
+                    onChange={(e) => setValue(e.target.value)}>
                 </input>
-                <img className="show-image"
-                src={visible ? "hide.png" : "show.png"}
-                alt="Hide/Show Icon"
-                onClick={toggleVisibility}></img>
+                <img 
+                    className="show-image"
+                    src={visible ? "hide.png" : "show.png"}
+                    alt="Hide/Show Icon"
+                    onClick={() => toggleVisibility(visible)}>
+                </img>
             </div>
         </section>
     );

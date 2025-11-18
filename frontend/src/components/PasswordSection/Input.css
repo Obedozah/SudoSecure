@@ -34,7 +34,9 @@
     cursor: pointer;
     font-family: 'Jura', sans-serif;
     font-weight: bolder;
+    font-size: .5em;
     text-align: center;
+    color: #ffffff;
 }
 
 .input:focus {
@@ -43,7 +45,7 @@
 
 .input::placeholder {
     font-style: italic;
-    color: #c0c0c0;
+    color: #ffffff;
 }
 
 .show-image {
