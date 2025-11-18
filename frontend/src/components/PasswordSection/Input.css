@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap');
 
 .input-section {
-    width: 30vw;
-    padding: 2rem;
+    width: 50vw;
+    padding: 4rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -11,7 +11,7 @@
 
     background-color: #353b4796;
     border-style: solid;
-    border-radius: 20px;
+    border-radius: 30px;
     border-color: #8b8b8b7e;
     border-width: 5px;
 
@@ -23,21 +23,22 @@
     position: relative;
     display: flex;
     flex-direction: row;
-    border-color: black;
-    border-style: style;
-    border-radius: 5px;
+    align-items: center;
 }
 
 .input {
     width: 60%;
     padding: 1rem 8rem;
     font-size: 1rem;
-    background-color: #f5f7f972;
-    border-radius: 4px;
+    background-color: #f5f7f927;
     cursor: pointer;
     font-family: 'Jura', sans-serif;
     font-weight: bolder;
     text-align: center;
+}
+
+.input:focus {
+    outline: none;
 }
 
 .input::placeholder {
@@ -46,6 +47,11 @@
 }
 
 .show-image {
-    height: 5%;
-    width: 5%;
+    height: 3.5%;
+    width: 3.5%;
+    margin-left: 1rem;
+}
+
+.show-image:hover {
+    transform: scale(1.15);
 }

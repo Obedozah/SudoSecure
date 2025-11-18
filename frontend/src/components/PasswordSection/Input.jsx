@@ -1,14 +1,21 @@
 import './Input.css';
 
+function toggleVisibility {
+    if image
+}
+
 function Input() {
     return (
         <section className="input-section">
             Test Your Password
             <div className="input-box">
-                <input type="text"
-                    className="input"   placeholder="Enter your password">
+                <input type={visible ? "text" : "password"}
+                    className="input" placeholder="Enter your password">
                 </input>
-                <img className="show-image" src="show.png" alt="Show Icon"></img>
+                <img className="show-image"
+                src={visible ? "hide.png" : "show.png"}
+                alt="Hide/Show Icon"
+                onClick={toggleVisibility}></img>
             </div>
         </section>
     );
