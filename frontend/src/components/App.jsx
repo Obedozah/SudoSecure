@@ -1,5 +1,5 @@
-import Header from './Header';
-import FAQ from './FAQ';
+import Header from './HeaderFooter/Header';
+import FAQ from './HeaderFooter/FAQ';
 import PasswordSection from './PasswordSection/PasswordSection';
 
 function App() {
