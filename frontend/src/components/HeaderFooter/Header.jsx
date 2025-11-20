@@ -38,7 +38,7 @@ function Header() {
                     backgroundColor:'#333333', color: '#ffffff', border: '0px solid #000000', borderTopRightRadius:'9px', borderBottomRightRadius:'9px', cursor: 'pointer',
                     position: 'absolute',top:(zoomLevel<='250')? '35px':'45px', right: (zoomLevel<'175')? '365px': (zoomLevel<='250')? '155px':'0px'}}>FAQ</button>
             </h1> 
-            <h1 style={{margin: '0px', background: 'linear-gradient(to right, #546785ff, #282b2cff)', align: 'top', textAlign: 'left', height: 105, color: '#ffffff',
+            <h1 style={{margin: '0px', background: 'linear-gradient(to bottom, #54565fff, #677b9cff)', align: 'top', textAlign: 'left', height: 105, color: '#ffffff',
             justifyContent: 'center', padding: '10px', display:'flex', flexDirection: 'row'
             }}>
                 <b style={{fontSize:'2.63rem', fontWeight:'345', letterSpacing: '-1px', height: (zoomLevel<'400')? '60px': '120px', paddingLeft: '20px', paddingRight: '20px', 
