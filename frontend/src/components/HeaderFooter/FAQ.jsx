@@ -108,6 +108,8 @@ function FAQ() {
         setq2TOP('120px')
     }
     
+    const [img1Hover, setIMG1Hover] = useState("default-image");
+    
     const [q3Hover, setQ3Hover] = useState("default-border");
 
     return (
@@ -115,7 +117,34 @@ function FAQ() {
       {/* ===== GOOD PRACTICES ===== */}
       <h1 id="GoodP" className="goodp-section">
         <b className="goodp-title">Good Practices</b>
-        <p className="goodp-sub">This section includes sotck images of locks/small widgets with tips on password mistakes</p>
+        <div className="goodp-sub">
+          <div className="goodp-image">
+            <img className={`goodp-img ${img1Hover}`} src={'show.png'}></img>
+            <p>Easy To Remember Password</p>
+          </div>
+          <div className="goodp-image">
+            <img className='goodp-img' src={'show.png'}></img>
+            <p>Enable MFA</p>
+          </div>
+          <div className="goodp-image">
+            <img className='goodp-img' src={'show.png'}></img>
+            <p>3rd</p>
+          </div>
+        </div>
+        <div className="goodp-sub">
+          <div className="goodp-image">
+            <img className='goodp-img' src={'show.png'}></img>
+            <p>4th</p>
+          </div>
+          <div className="goodp-image">
+            <img className='goodp-img' src={'show.png'}></img>
+            <p>5th</p>
+          </div>
+          <div className="goodp-image">
+            <img className='goodp-img' src={'show.png'}></img>
+            <p>6th</p>
+          </div>
+        </div>
       </h1>
 
       {/* ===== FAQ SECTION ===== */}

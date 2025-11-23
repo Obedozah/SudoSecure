@@ -13,7 +13,7 @@
 /* Bottom header bar */
 .header-bottom {
   margin: 0;
-  background: linear-gradient(to right, #546785ff, #282b2cff);
+  background: linear-gradient(to bottom, #54565fff, #677b9cff);
   height: 105px;
   color: white;
   padding: 10px;
