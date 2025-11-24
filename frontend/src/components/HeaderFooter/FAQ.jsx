@@ -25,8 +25,9 @@ function FAQ() {
     const [q1Display, setQ1Visi] = useState('collapse');
     const [q1PlusDisplay, setQ1Plus] = useState("+");
     //MAKE DYNAMIC SPACING FOR FAQS
-    const [q2DisplayTOP, setq2TOP] = useState('120px');
-    const [q3DisplayTOP, setq3TOP] = useState('140px');
+    const [q1expanded, setq1expand] = useState(false);
+    const [q2expanded, setq2expand] = useState(false);
+    const [q3expanded, setq3expand] = useState(false);
     const handleClickQ1 = ()=>{
         if(q1PlusDisplay==="+"){
             setQ1Plus("~")
@@ -42,17 +43,20 @@ function FAQ() {
         }else{
             setQ1Visi('collapse');
         }
+        setq1expand(!q1expanded);
+        setq2expand(false);
+        setq3expand(false);
         //Display moving
-        if(q2DisplayTOP === '120px'){
-            setq2TOP('280px')
-        }else{
-            setq2TOP('120px')
-        }
-        if(q3DisplayTOP === '140px'){
-            setq3TOP('300px')
-        }else if(q3DisplayTOP==='300px' && !(q2Display === 'visible')){
-            setq3TOP('140px')
-        }
+        // if(q2DisplayTOP === '120px'){
+        //     setq2TOP('280px')
+        // }else{
+        //     setq2TOP('120px')
+        // }
+        // if(q3DisplayTOP === '140px'){
+        //     setq3TOP('300px')
+        // }else if(q3DisplayTOP==='300px' && !(q2Display === 'visible')){
+        //     setq3TOP('140px')
+        // }
     }
     const [q1Hover, setQ1Hover] = useState("default-border");
 
@@ -74,15 +78,18 @@ function FAQ() {
         }else{
             setQ2Visi('collapse');
         }
+        setq2expand(!q2expanded);
+        setq1expand(false);
+        setq3expand(false);
         //Display moving
-        if(q2DisplayTOP === '280px'){
-            setq2TOP('120px')
-        }
-        if(q3DisplayTOP === '140px'){
-            setq3TOP('300px')
-        }else if(q3DisplayTOP==='300px'&& !(q1Display=== 'visible')){
-            setq3TOP('140px')
-        }
+        // if(q2DisplayTOP === '280px'){
+        //     setq2TOP('120px')
+        // }
+        // if(q3DisplayTOP === '140px'){
+        //     setq3TOP('300px')
+        // }else if(q3DisplayTOP==='300px'&& !(q1Display=== 'visible')){
+        //     setq3TOP('140px')
+        // }
     }
     const [q2Hover, setQ2Hover] = useState("default-border");
 
@@ -104,8 +111,11 @@ function FAQ() {
         }else{
             setQ3Visi('collapse');
         }
-        setq3TOP('140px')
-        setq2TOP('120px')
+        setq3expand(!q3expanded);
+        setq2expand(false);
+        setq1expand(false);
+        // setq3TOP('140px')
+        // setq2TOP('120px')
     }
     
     const [img1Hover, setIMG1Hover] = useState("default-image");
@@ -119,29 +129,29 @@ function FAQ() {
         <b className="goodp-title">Good Practices</b>
         <div className="goodp-sub">
           <div className="goodp-image">
-            <img className={`goodp-img ${img1Hover}`} src={'show.png'}></img>
+            <img className={`goodp-img ${img1Hover}`} src={'show.png'} alt='img 1'></img>
             <p>Easy To Remember Password</p>
           </div>
           <div className="goodp-image">
-            <img className='goodp-img' src={'show.png'}></img>
+            <img className='goodp-img' src={'show.png'} alt='img 2'></img>
             <p>Enable MFA</p>
           </div>
           <div className="goodp-image">
-            <img className='goodp-img' src={'show.png'}></img>
+            <img className='goodp-img' src={'show.png'} alt='img 3'></img>
             <p>3rd</p>
           </div>
         </div>
         <div className="goodp-sub">
           <div className="goodp-image">
-            <img className='goodp-img' src={'show.png'}></img>
+            <img className='goodp-img' src={'show.png'} alt='img 4'></img>
             <p>4th</p>
           </div>
           <div className="goodp-image">
-            <img className='goodp-img' src={'show.png'}></img>
+            <img className='goodp-img' src={'show.png'} alt='img 5' ></img>
             <p>5th</p>
           </div>
           <div className="goodp-image">
-            <img className='goodp-img' src={'show.png'}></img>
+            <img className='goodp-img' src={'show.png'} alt='img 6'></img>
             <p>6th</p>
           </div>
         </div>
@@ -162,96 +172,89 @@ function FAQ() {
           Frequently Asked Questions
         </b>
 
-        {/* ---------------- Q1 ---------------- */}
-        <div className="faq-row">
-          <button
-            onClick={handleClickQ1}
-            className={`faq-btn ${q1Hover}`}
-            style={{
-              height: zoomLevel < 500 ? "40px" : "75px",
-            }}
-          >
-            What Is a Password Checker?
-            <p className="faq-plus">{q1PlusDisplay}</p>
-
-            <table
-              className="faq-answer"
+        <div className="faq-questions-section">
+            
+          {/* ---------------- Q1 ---------------- */}
+          <section className={`faq-row ${q1expanded ? "expanded" : ""}`}>
+            <button
+              onClick={handleClickQ1}
+              className={`faq-btn ${q1Hover}`}
               style={{
-                visibility: q1Display,
-                fontSize:
-                  zoomLevel < 400
-                    ? "30px"
-                    : zoomLevel < 500
-                    ? "25px"
-                    : "23px",
+                height: zoomLevel < 500 ? "40px" : "75px",
               }}
             >
-              The Hog Rider in Clash Royale is a fast, single-target troop that heads 
-                straight for buildings, leaping over rivers to reach them quickly. He deals 
-                solid melee damage and is often used as a win condition due to his speed and 
-                ability to pressure towers efficiently.
-            </table>
-          </button>
-        </div>
+              What Is a Password Checker?
+              <p className="faq-plus">{q1PlusDisplay}</p>
 
-        {/* ---------------- Q2 ---------------- */}
-        <div className="faq-row">
-          <button
-            onClick={handleClickQ2}
-            className={`faq-btn ${q2Hover}`}
-            style={{ top: q2DisplayTOP }}
-          >
-            Is The Website Safe?
-            <p className="faq-plus">{q2PlusDisplay}</p>
+              
+            </button>
+            <p
+                className="faq-answer"
+                style={{
+                  visibility: q1Display,
+                  
+                }}
+              >
+                The Hog Rider in Clash Royale is a fast, single-target troop that heads 
+                  straight for buildings, leaping over rivers to reach them quickly. He deals 
+                  solid melee damage and is often used as a win condition due to his speed and 
+                  ability to pressure towers efficiently.
+              </p>
+          </section>
 
-            <table
-              className="faq-answer"
-              style={{
-                visibility: q2Display,
-                fontSize:
-                  zoomLevel < 400
-                    ? "30px"
-                    : zoomLevel < 500
-                    ? "25px"
-                    : "23px",
-              }}
+          </div>
+          
+        <div className="faq-questions-section">
+          {/* ---------------- Q2 ---------------- */}
+          <section className={`faq-row ${q2expanded ? "expanded" : ""}`}>
+            <button
+              onClick={handleClickQ2}
+              className={`faq-btn ${q2Hover}`}
+              style={{  }}
             >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
-                 commodo consequat. Duis aute irure dolor in reprehenderit.
-            </table>
-          </button>
-        </div>
+              Is The Website Safe?
+              <p className="faq-plus">{q2PlusDisplay}</p>
 
-        {/* ---------------- Q3 ---------------- */}
-        <div className="faq-row">
-          <button
-            onClick={handleClickQ3}
-            className={`faq-btn ${q3Hover}`}
-            style={{ top: q3DisplayTOP,
-              height: zoomLevel < 500 ? "40px" : "75px", }}
-          >
-            Can a Strong Password Get Hacked?
-            <p className="faq-plus">{q3PlusDisplay}</p>
+              
+            </button>
+            <p
+                className="faq-answer"
+                style={{
+                  visibility: q2Display,
+                }}
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
+                  commodo consequat. Duis aute irure dolor in reprehenderit.
+              </p>
+          </section>
 
-            <table
-              className="faq-answer"
-              style={{
-                visibility: q3Display,
-                fontSize:
-                  zoomLevel < 400
-                    ? "30px"
-                    : zoomLevel < 500
-                    ? "25px"
-                    : "23px",
-              }}
+          </div>
+        <div className="faq-questions-section">
+          {/* ---------------- Q3 ---------------- */}
+          <section className={`faq-row ${q3expanded ? "expanded" : ""}`}>
+            <button
+              onClick={handleClickQ3}
+              className={`faq-btn ${q3Hover}`}
+              style={{  height: zoomLevel < 400 ? "40px" : "75px", }}
             >
-              Apple Bannana Cucumber Desert Emmett Faraway Great High-five Internet Joe
-                Karat Lemons Minnetsota. Niagra Falls Orangutan Prerequisite Quintanilla 
-                Rusty Southern Tires Umbrella Video Wires Xylophone Young Zootopia.
-            </table>
-          </button>
+              Can a Strong Password Get Hacked?
+              <p className="faq-plus">{q3PlusDisplay}</p>
+
+            </button>
+            <p
+                className="faq-answer"
+                style={{
+                  visibility: q3Display,
+                }}
+              >
+                Apple Bannana Cucumber Desert Emmett Faraway Great High-five Internet Joe
+                  Karat Lemons Minnetsota. Niagra Falls Orangutan Prerequisite Quintanilla 
+                  Rusty Southern Tires Umbrella Video Wires Xylophone Young Zootopia.
+            </p>
+          </section>
+        
         </div>
       </h1>
     </header>

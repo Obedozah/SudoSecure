@@ -8,6 +8,6 @@
 
     background-color: #aeaeae;
 
-    font-size: clamp(2rem, 2vw + 0.5rem, 3rem);
+    font-size: clamp(1rem, 2vw + 0.5rem, 3rem);
     color: white;
 }

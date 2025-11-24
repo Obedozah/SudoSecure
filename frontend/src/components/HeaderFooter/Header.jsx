@@ -111,7 +111,7 @@ function Header() {
         <b
           className="password-title"
           style={{
-            height: zoomLevel < 400 ? zoomLevel < 250? "60px": '80px' : "120px",
+            height: zoomLevel < 400 ? zoomLevel < 250? "60px": '80px' : "110px",
             top: "0px",
           }}
         >

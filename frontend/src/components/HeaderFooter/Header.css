@@ -8,6 +8,7 @@
   display: flex;
   flex-direction: row;
   position: relative;
+  overflow: hidden;
 }
 
 /* Bottom header bar */
@@ -27,11 +28,12 @@
 
 /* Middle title box */
 .password-title {
-  font-size:  smaller;
+  font-size:  clamp(.9rem, 4.5vw + 0.5rem, 3rem);
   font-weight: 345;
   letter-spacing: -1px;
   padding-left: 20px;
   padding-right: 20px;
+  padding-bottom: 5px;
   background-color: #323841ff;
   border: solid #546785ff;
   border-radius: 10px;
@@ -40,5 +42,6 @@
   text-align: center;
   align-items: center;
   position: relative;
+  overflow: hidden;
   left: 0;
 }
