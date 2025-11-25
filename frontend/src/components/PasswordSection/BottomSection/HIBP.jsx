@@ -2,8 +2,8 @@ import './HIBP.css';
 
 function HIBP() {
     return (
-        <div className="hibp">
-            hibp
+        <div className="hibp-section">
+            HIBP
         </div>
     );
 }

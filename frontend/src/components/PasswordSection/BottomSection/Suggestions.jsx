@@ -2,8 +2,8 @@ import './Suggestions.css';
 
 function Suggestions() {
     return (
-        <div className="suggestions">
-            suggestions
+        <div className="suggestions-section">
+            Suggestions
         </div>
     );
 }
