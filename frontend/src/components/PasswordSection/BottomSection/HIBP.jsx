@@ -1,3 +1,5 @@
+import './HIBP.css';
+
 function HIBP() {
     return (
         <div className="hibp">

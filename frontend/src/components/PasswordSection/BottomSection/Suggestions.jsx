@@ -1,3 +1,5 @@
+import './Suggestions.css';
+
 function Suggestions() {
     return (
         <div className="suggestions">

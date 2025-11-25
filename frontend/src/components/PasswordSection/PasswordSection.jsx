@@ -10,15 +10,17 @@ function PasswordSection() {
   const expanded = inputValue !== "";
 
   return (
-    <section className={`password-section ${expanded ? "expanded" : ""}`}>
-      {/*Password Strength Checker Section wo/background*/}
-      <div className="password-content">
+    <section className="password-section">
+      {/*Input Section*/}
+      <div className="input-content">
         <Input value={inputValue} setValue={setInputValue}/>
+      </div>
+      <div className={`password-content ${expanded ? "expanded" : ""}`}>
         {/*Evaluations Section*/}
-        {expanded && <Evaluations />}
+        <Evaluations />
         {/*Have I Been Pwned/Suggestion Section*/}
-        {expanded && <HIBP />}
-        {expanded && <Suggestions />}
+        <HIBP />
+        <Suggestions />
       </div>
     </section>
   );

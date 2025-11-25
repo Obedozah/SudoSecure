@@ -9,21 +9,19 @@ function Input({ value, setValue }) {
 
     return (
         <section className="input-section">
-            <div className="input-box">
-                <input
-                    type={visible ? "text" : "password"}
-                    className="input"
-                    placeholder="Enter your password"
-                    value={value}
-                    onChange={(e) => setValue(e.target.value)}>
-                </input>
-                <img 
-                    className="show-image"
-                    src={visible ? "hide.png" : "show.png"}
-                    alt="Hide/Show Icon"
-                    onClick={() => toggleVisibility(visible)}>
-                </img>
-            </div>
+            <input
+                type={visible ? "text" : "password"}
+                className="input"
+                placeholder="Enter your password"
+                value={value}
+                onChange={(e) => setValue(e.target.value)}>
+            </input>
+            <img 
+                className="show-image"
+                src={visible ? "hide.png" : "show.png"}
+                alt="Hide/Show Icon"
+                onClick={() => toggleVisibility(visible)}>
+            </img>
         </section>
     );
 }
