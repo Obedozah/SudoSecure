@@ -1,13 +1,17 @@
 import Evaluations from "./Evaluations";
 import HIBP from "./HIBP";
 import Suggestions from "./Suggestions";
+import './PasswordContent.css'
 
-function PasswordContent() {
+function PasswordContent({ label, level, time, strengthColor }) {
     return (
         <section className="password-content">
-            {/*Evaluations Section*/}
-            <Evaluations />
-            {/*Have I Been Pwned/Suggestion Section*/}
+            <Evaluations
+                label={ label }
+                level={ level }
+                time={ time }
+                strengthColor= { strengthColor }
+                />
             <HIBP />
             <Suggestions />
         </section>

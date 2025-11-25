@@ -1,9 +1,20 @@
 import './Evaluations.css';
+function Evaluations({ label, level, time, strengthColor }) {
 
-function Evaluations() {
     return (
         <section className="evaluations-section">
-            Evaluations
+            Strength: {label}
+            <div className="strength-bar">
+                <div
+                    className="strength-bar-level"
+                    style={{
+                        backgroundColor: strengthColor,
+                        width: `${((level + 1) / 4) * 100}%`
+                    }}
+                >
+                </div>
+            </div>
+            Time To Crack: {time}
         </section>
     );
 }
