@@ -1,0 +1,15 @@
+.evaluations-section {
+    border-radius: 40px;
+
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    background-color: rgba(40, 53, 78, 0.772);
+
+    font-size: clamp(2rem, 2vw + 0.5rem, 3rem);
+    color: white;
+}

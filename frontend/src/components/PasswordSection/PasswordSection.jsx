@@ -1,8 +1,6 @@
+import Input from './InputSection/Input';
 import './PasswordSection.css';
-import Input from "./InputSection/Input";
-import Evaluations from "./EvaluationsSection/Evaluations";
-import HIBP from "./BottomSection/HIBP";
-import Suggestions from "./BottomSection/Suggestions";
+import PasswordContent from './PasswordContent/PasswordContent'
 import React, { useState } from "react";
 
 function PasswordSection() {
@@ -16,11 +14,7 @@ function PasswordSection() {
         <Input value={inputValue} setValue={setInputValue}/>
       </div>
       <div className={`password-content ${expanded ? "expanded" : ""}`}>
-        {/*Evaluations Section*/}
-        <Evaluations />
-        {/*Have I Been Pwned/Suggestion Section*/}
-        <HIBP />
-        <Suggestions />
+        <PasswordContent/>
       </div>
     </section>
   );
