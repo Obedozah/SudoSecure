@@ -23,7 +23,7 @@ function PasswordSection() {
   // Variables for Display Formatting
   const expanded = inputValue !== "";
 
-  // Suggestions Variables
+  // Suggestions Variables **ADD TO THIS LIKE CONTAINS COMMON WORDS OR SOMETHING**
   const [hasUpper, setHasUpper] = useState(false);
   const [hasLower, setHasLower] = useState(false);
   const [hasNumber, setHasNumber] = useState(false);
