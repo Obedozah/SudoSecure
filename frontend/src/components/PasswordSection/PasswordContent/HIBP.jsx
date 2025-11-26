@@ -6,6 +6,7 @@ function HIBP({ hibp }) {
 
     return (
         <section className="hibp-section">
+            <hr className="whiteLine"/>
             {pwned ? (
                 <div>
                     <h1>Pwned!</h1>

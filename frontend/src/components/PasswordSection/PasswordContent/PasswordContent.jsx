@@ -3,19 +3,19 @@ import HIBP from "./HIBP";
 import Suggestions from "./Suggestions";
 import './PasswordContent.css'
 
-function PasswordContent({ label, level, time, strengthColor, inputValue, hibp}) {
+function PasswordContent({ inputValue, evaluations, hibp, suggestions }) {
     return (
         <section className="password-content">
             <Evaluations
-                label={ label }
-                level={ level }
-                time={ time }
-                strengthColor= { strengthColor }
+                evaluations={ evaluations }
                 />
+            <Suggestions
+                inputValue={ inputValue }
+                suggestions={ suggestions }
+            />
             <HIBP 
                 hibp={ hibp }
             />
-            <Suggestions />
         </section>
     )
 }
