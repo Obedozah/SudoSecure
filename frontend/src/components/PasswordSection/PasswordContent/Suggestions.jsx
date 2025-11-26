@@ -3,7 +3,10 @@ import './Suggestions.css';
 function Suggestions() {
     return (
         <section className="suggestions-section">
-            Suggestions
+            <h1>Suggestions</h1>
+            <p>
+                
+            </p>
         </section>
     );
 }
