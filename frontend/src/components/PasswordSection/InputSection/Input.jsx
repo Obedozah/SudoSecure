@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import './Input.css';
 
-function Input({ value, setValue }) {
+function Input({ value, setValue, strengthColor}) {
     const [visible, setVisibility] = useState(false);
     function toggleVisibility() {
         setVisibility(!visible);
@@ -14,7 +14,11 @@ function Input({ value, setValue }) {
                 className="input"
                 placeholder="Enter your password"
                 value={value}
-                onChange={(e) => setValue(e.target.value)}>
+                
+                onChange={(e) => setValue(e.target.value)}
+                style={{ color: strengthColor }}
+                >
+                
             </input>
             <img 
                 className="show-image"

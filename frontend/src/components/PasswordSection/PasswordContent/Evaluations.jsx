@@ -3,7 +3,7 @@ function Evaluations({ label, level, time, strengthColor }) {
 
     return (
         <section className="evaluations-section">
-            Strength: {label}
+            <h1>Strength: {label}</h1>
             <div className="strength-bar">
                 <div
                     className="strength-bar-level"
@@ -14,7 +14,7 @@ function Evaluations({ label, level, time, strengthColor }) {
                 >
                 </div>
             </div>
-            Time To Crack: {time}
+            <p>Time To Crack: {time}</p>
         </section>
     );
 }

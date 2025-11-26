@@ -3,7 +3,7 @@
 .input-section {
     border-radius: 40px;
     padding: 2rem 2.2rem;
-    width: 95.3%;
+    width: 50%;
     height: 100%;
     
     display: flex;
@@ -14,13 +14,12 @@
     background-color: #2a2a2a96;
 
     font-size: clamp(2rem, 2vw + 0.5rem, 3rem);
-    color: white;
 }
 
 .input {
     border-style: solid;
     border-color: rgb(55, 55, 55);
-    border-width: 6px;
+    border-width: 2px;
     border-radius: 40px;
     padding: 2rem;
     margin-left: -0.58em;
@@ -31,7 +30,13 @@
     font-family: 'Jura', sans-serif;
     font-weight: bolder;
     text-align: center;
-    color: #ffffff;
+    color: white;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input:hover {
+    border-color: rgb(77, 104, 139);
+    box-shadow: 0 0 10px #4f5b6d;
 }
 
 .input:focus {
@@ -44,7 +49,7 @@
 }
 
 .input, .input:focus, input::placeholder {
-    font-size: clamp(2rem, 0.5vw + 0.5rem, 2rem);
+    font-size: clamp(1.5rem, 0.9vw + 0.5rem, 2rem);
 }
 
 .show-image {
