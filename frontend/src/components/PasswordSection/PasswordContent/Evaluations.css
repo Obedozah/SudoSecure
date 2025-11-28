@@ -1,0 +1,27 @@
+.evaluations-section {
+    flex: 0 1 auto;
+    min-height: 6em;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+    color: white;
+}
+
+.strength-bar {
+    border-style: solid;
+    border-color: rgb(42, 53, 72);
+    border-width: 2px;
+    width: 60%;
+    min-height: 1.25em;
+    background: #545657;
+    border-radius: 30px;
+}
+
+.strength-bar-level {
+    border-radius: 20px;
+    min-height: 1.25em;
+    transition: width 0.5s ease, background-color 0.5s ease;
+}

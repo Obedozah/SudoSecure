@@ -58,7 +58,7 @@ function FAQ() {
         //     setq3TOP('140px')
         // }
     }
-    const [q1Hover, setQ1Hover] = useState("default-border");
+    const [q1Hover] = useState("default-border");
 
 
     const [q2Display, setQ2Visi] = useState('collapse');
@@ -91,7 +91,7 @@ function FAQ() {
         //     setq3TOP('140px')
         // }
     }
-    const [q2Hover, setQ2Hover] = useState("default-border");
+    const [q2Hover] = useState("default-border");
 
 
     const [q3Display, setQ3Visi] = useState('collapse');
@@ -118,12 +118,12 @@ function FAQ() {
         // setq2TOP('120px')
     }
     
-    const [img1Hover, setIMG1Hover] = useState("default-image");
+    const [img1Hover] = useState("default-image");
     
-    const [q3Hover, setQ3Hover] = useState("default-border");
+    const [q3Hover] = useState("default-border");
 
     return (
-    <header>
+    <header style={{background: 'transparent'}}>
       {/* ===== GOOD PRACTICES ===== */}
       <h1 id="GoodP" className="goodp-section">
         <b className="goodp-title">Good Practices</b>
@@ -180,7 +180,7 @@ function FAQ() {
               onClick={handleClickQ1}
               className={`faq-btn ${q1Hover}`}
               style={{
-                height: zoomLevel < 500 ? "40px" : "75px",
+                // height: zoomLevel < 500 ? "40px" : "75px",
               }}
             >
               What Is a Password Checker?
@@ -237,7 +237,7 @@ function FAQ() {
             <button
               onClick={handleClickQ3}
               className={`faq-btn ${q3Hover}`}
-              style={{  height: zoomLevel < 400 ? "40px" : "75px", }}
+              // style={{  height: zoomLevel < 400 ? "40px" : "75px", }}
             >
               Can a Strong Password Get Hacked?
               <p className="faq-plus">{q3PlusDisplay}</p>

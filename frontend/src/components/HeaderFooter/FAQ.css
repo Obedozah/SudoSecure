@@ -4,7 +4,7 @@
   margin: 0;
   text-align: center;
   color: white;
-  background: linear-gradient(to bottom, #677b9cff, #1c1e1fff);
+  /* background: linear-gradient(to bottom, #677b9cff, #1c1e1fff); */
   height: 600px;
   overflow: hidden;
 }
@@ -23,7 +23,7 @@
   position: relative;
   justify-content: center;
   top: 60px;
-  background-color: blue;
+  /* background-color: blue; */
 }
 
 .goodp-image {
@@ -38,7 +38,7 @@
   width: 500px;
   height: 100px;
   background-color: transparent;
-  border: solid;
+  /* border: solid; */
 }
 
 .goodp-img {
@@ -64,7 +64,7 @@
 .faq-section {
   margin: 0;
   text-align: center;
-  background: radial-gradient(circle, #677b9cff, #cbccccff);
+  /* background: radial-gradient(circle, #677b9cff, #cbccccff); */
   align-items: center;
   position: relative;
   overflow: hidden;
@@ -85,7 +85,7 @@
   justify-content: center;
   align-items: center;
   top: 100px;
-  background-color: rgba(22, 141, 61, 0.5);
+  /* background-color: rgba(22, 141, 61, 0.5); */
 }
 /* ========== FAQ BUTTONS ========== */
 
@@ -116,22 +116,23 @@
   top: 0px;
   width: 1200px;
   overflow: hidden;
-  background-color: rgba(0, 0, 1,0.5);
-  border: solid;
+  /* background-color: rgba(0, 0, 1,0.5); */
+  /* border: solid; */
   transition: height 1s ease;
 }
 
 .faq-btn {
-  width: 60rem;
-  font-size: clamp(1rem, 4.4vw + 0.469rem, 1.875rem);
-  letter-spacing: 4px;
-  background-color: #455563ff;
+  width: 80%;
+  font-size: clamp(.01rem, 1.8vw + 0.350rem, 1.875rem);
+  letter-spacing: clamp(0rem, 1.8vw + 0.05rem, .25rem);
+  background-color: rgb(38, 48, 66);
   color: white;
   position: relative;
-  border: 2px solid #3d4a55ff;
-  align-items: end;
+  border: 2px solid rgb(47, 54, 59);
+  align-items: center;
   transition: 0.2s border;
   height: 40px;
+  text-align: center;
   top: 0px;
   overflow: visible;
 }
@@ -148,31 +149,30 @@
 
 .faq-plus {
   position: relative;
-  left:96%;
-  top: -2.3em;
+  left:93.5%;
+  top: -2.2em;
   /* background-color: red; */
   width: 17px;
   height: 20px;
   text-align: center;
   justify-content: center;
-  font-size: clamp(1rem, 4vw + 0.469rem, 1.750rem);
+  font-size: clamp(.1rem, 1.8vw + 0.450rem, 1.875rem);
   cursor: pointer;
 }
 
 /* ========== FAQ ANSWERS ========== */
 
 .faq-answer {
-  background-color: #687e92ff;
+  background-color: rgb(40, 51, 61);
   position: relative;
   margin: 0px;
-  font-size: clamp(.7rem, 2vw + 0.469rem, 1.50rem);
+  font-size: clamp(.01rem, 1.8vw + 0.469rem, 1.50rem);
   font-weight: 450;
   color: white;
   letter-spacing: 0px;
   padding: 0px;
-  overflow: auto;
-  width: 58rem;
-  padding-left: 10px;
-  padding-right: 10px;
+  /* overflow: auto; */
+  text-align: center;
+  width: 79%;
   height: 170px;
 }
