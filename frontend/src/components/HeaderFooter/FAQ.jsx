@@ -210,29 +210,29 @@ function FAQ() {
         <b className="goodp-title">Good Practices</b>
         <div className="goodp-sub">
           <div className="goodp-image">
-            <img className={`goodp-img ${img1Hover}`} src={'show.png'} alt='img 1'></img>
+            <img className={`goodp-img ${img1Hover}`} src={'img1.png'} alt='img 1'></img>
             <p>Use Complex Passwords</p>
           </div>
           <div className="goodp-image">
-            <img className='goodp-img' src={'show.png'} alt='img 2'></img>
+            <img className='goodp-img' src={'img2.png'} alt='img 2'></img>
             <p>Enable MFA</p>
           </div>
           <div className="goodp-image">
-            <img className='goodp-img' src={'show.png'} alt='img 3'></img>
+            <img className='goodp-img' src={'img3.png'} alt='img 3'></img>
             <p>Don't Reuse Passwords</p>
           </div>
         </div>
         <div className="goodp-sub">
           <div className="goodp-image">
-            <img className='goodp-img' src={'show.png'} alt='img 4'></img>
+            <img className='goodp-img' src={'img4.png'} alt='img 4'></img>
             <p>Don't Let Browsers Save Your Passwords</p>
           </div>
           <div className="goodp-image">
-            <img className='goodp-img' src={'show.png'} alt='img 5' ></img>
+            <img className='goodp-img' src={'img5.png'} alt='img 5' ></img>
             <p>Don't Share Passwords</p>
           </div>
           <div className="goodp-image">
-            <img className='goodp-img' src={'show.png'} alt='img 6'></img>
+            <img className='goodp-img' src={'img6.png'} alt='img 6'></img>
             <p>Physical Instead of Digital Copies</p>
           </div>
         </div>
