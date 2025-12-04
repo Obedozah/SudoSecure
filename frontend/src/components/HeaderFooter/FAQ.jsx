@@ -203,39 +203,117 @@ function FAQ() {
     
     const [q3Hover] = useState("default-border");
 
+    const [gp1Hover,setGP1Hov] = useState(false);
+
+    const handleGP1enter= ()=>{
+      setGP1Hov(true);
+    }
+    const handleGP1leave= ()=>{
+      setGP1Hov(false);
+    }
+    //IMAGE2
+    const [gp2Hover,setGP2Hov] = useState(false);
+
+    const handleGP2enter= ()=>{
+      setGP2Hov(true);
+    }
+    const handleGP2leave= ()=>{
+      setGP2Hov(false);
+    }
+    //IMAGE3
+    const [gp3Hover,setGP3Hov] = useState(false);
+
+    const handleGP3enter= ()=>{
+      setGP3Hov(true);
+    }
+    const handleGP3leave= ()=>{
+      setGP3Hov(false);
+    }
+    //IMAGE4
+    const [gp4Hover,setGP4Hov] = useState(false);
+
+    const handleGP4enter= ()=>{
+      setGP4Hov(true);
+    }
+    const handleGP4leave= ()=>{
+      setGP4Hov(false);
+    }
+    //IMAGE5
+    const [gp5Hover,setGP5Hov] = useState(false);
+
+    const handleGP5enter= ()=>{
+      setGP5Hov(true);
+    }
+    const handleGP5leave= ()=>{
+      setGP5Hov(false);
+    }
+    //IMAGE6
+    const [gp6Hover,setGP6Hov] = useState(false);
+
+    const handleGP6enter= ()=>{
+      setGP6Hov(true);
+    }
+    const handleGP6leave= ()=>{
+      setGP6Hov(false);
+    }
+
+
     return (
     <header style={{background: 'linear-gradient(to bottom, rgba(48, 51, 58, .5), rgba(34, 37, 44, 0.5))'}}>
       {/* ===== GOOD PRACTICES ===== */}
       <h1 id="GoodP" className="goodp-section">
         <b className="goodp-title">Good Practices</b>
+        {/*FIRST COL*/}
         <div className="goodp-sub">
-          <div className="goodp-image">
-            <img className={`goodp-img ${img1Hover}`} src={'img1.png'} alt='img 1'></img>
-            <p>Use Complex Passwords</p>
+          {/*FIRST IMAGE*/}
+          <div className="goodp-col">
+            <div className={`goodp-image ${gp1Hover ? "expanded" : ""}`}>
+              <img onMouseEnter={handleGP1enter} onMouseLeave={handleGP1leave} className={`goodp-img ${img1Hover}`} src={'img1.png'} alt='img 1'></img>
+              <p style={{fontSize: 'clamp(.01rem, 1.2vw + 0.350rem, 1.875rem)'}}>Use Complex Passwords</p>
+              <p style={{fontSize: 'clamp(.01rem, 1.1vw + 0.350rem, 1.775rem)', fontWeight: "lighter"}}>Try using complex passwords over simple, easy to remember passwords.</p>
+            </div>
+          {/*Fourth IMAGE*/}
+          <div className={`goodp-image ${gp4Hover ? "expanded" : ""}`}>
+            <img onMouseEnter={handleGP4enter} onMouseLeave={handleGP4leave} className='goodp-img' src={'img2.png'} alt='img 2'></img>
+            <p style={{fontSize: 'clamp(.01rem, 1.2vw + 0.350rem, 1.875rem)'}}>Disable Browser Password Saving</p>
+            <p style={{fontSize: 'clamp(.01rem, 1.1vw + 0.350rem, 1.775rem)', fontWeight: "lighter"}}>Try using complex passwords over simple, easy to remember passwords.</p>
           </div>
-          <div className="goodp-image">
-            <img className='goodp-img' src={'img2.png'} alt='img 2'></img>
-            <p>Enable MFA</p>
+            
           </div>
-          <div className="goodp-image">
-            <img className='goodp-img' src={'img3.png'} alt='img 3'></img>
-            <p>Don't Reuse Passwords</p>
+          <div className="goodp-col">
+          {/*Second IMAGE*/}
+          <div className={`goodp-image ${gp2Hover ? "expanded" : ""}`}>
+            <img onMouseEnter={handleGP2enter} onMouseLeave={handleGP2leave} className='goodp-img' src={'img3.png'} alt='img 3'></img>
+            <p style={{fontSize: 'clamp(.01rem, 1.2vw + 0.350rem, 1.875rem)'}}>Enable MFA</p>
+            <p style={{fontSize: 'clamp(.01rem, 1.1vw + 0.350rem, 1.775rem)', fontWeight: "lighter"}}>Try using complex passwords over simple, easy to remember passwords.</p>
+          </div>
+          {/*Fifth IMAGE*/}
+          <div className={`goodp-image ${gp5Hover ? "expanded" : ""}`}>
+            <img onMouseEnter={handleGP5enter} onMouseLeave={handleGP5leave} className='goodp-img' src={'img4.png'} alt='img 4' ></img>
+            <p style={{fontSize: 'clamp(.01rem, 1.2vw + 0.350rem, 1.875rem)'}}>Don't Share Passwords</p>
+            <p style={{fontSize: 'clamp(.01rem, 1.1vw + 0.350rem, 1.775rem)', fontWeight: "lighter"}}>Try using complex passwords over simple, easy to remember passwords.</p>
+          </div>
+          </div>
+          <div className="goodp-col">
+          {/*Third IMAGE*/}
+          <div className={`goodp-image ${gp3Hover ? "expanded" : ""}`}>
+            <img onMouseEnter={handleGP3enter} onMouseLeave={handleGP3leave} className='goodp-img' src={'img5.png'} alt='img 5'></img>
+            <p style={{fontSize: 'clamp(.01rem, 1.2vw + 0.350rem, 1.875rem)'}}>Don't Reuse Passwords</p>
+            <p style={{fontSize: 'clamp(.01rem, 1.1vw + 0.350rem, 1.775rem)', fontWeight: "lighter"}}>Try using complex passwords over simple, easy to remember passwords.</p>
+          </div>
+          {/*Sixth IMAGE*/}
+          <div className={`goodp-image ${gp6Hover ? "expanded" : ""}`}>
+            <img onMouseEnter={handleGP6enter} onMouseLeave={handleGP6leave} className='goodp-img' src={'img6.png'} alt='img 6'></img>
+            <p style={{fontSize: 'clamp(.01rem, 1.2vw + 0.350rem, 1.875rem)'}}>Physical Instead of Digital Copies</p>
+            <p style={{fontSize: 'clamp(.01rem, 1.1vw + 0.350rem, 1.775rem)', fontWeight: "lighter"}}>Try using complex passwords over simple, easy to remember passwords.</p>
+          </div>
           </div>
         </div>
-        <div className="goodp-sub">
-          <div className="goodp-image">
-            <img className='goodp-img' src={'img4.png'} alt='img 4'></img>
-            <p>Don't Let Browsers Save Your Passwords</p>
-          </div>
-          <div className="goodp-image">
-            <img className='goodp-img' src={'img5.png'} alt='img 5' ></img>
-            <p>Don't Share Passwords</p>
-          </div>
-          <div className="goodp-image">
-            <img className='goodp-img' src={'img6.png'} alt='img 6'></img>
-            <p>Physical Instead of Digital Copies</p>
-          </div>
-        </div>
+        
+        {/*SECOND ROW*/}
+        {/* <div className="goodp-sub"> */}
+          {/*Fourth IMAGE*/}
+        {/* </div> */}
       </h1>
 
       {/* ===== FAQ SECTION ===== */}
