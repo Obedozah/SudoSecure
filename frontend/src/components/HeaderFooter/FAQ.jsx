@@ -263,34 +263,28 @@ function FAQ() {
       {/* ===== GOOD PRACTICES ===== */}
       <h1 id="GoodP" className="goodp-section">
         <b className="goodp-title">Good Practices</b>
-        {/*FIRST ROW*/}
+        {/*FIRST COL*/}
         <div className="goodp-sub">
           {/*FIRST IMAGE*/}
-          <div className={`goodp-image ${gp1Hover ? "expanded" : ""}`}>
-            <img onMouseEnter={handleGP1enter} onMouseLeave={handleGP1leave} className={`goodp-img ${img1Hover}`} src={'show.png'} alt='img 1'></img>
-            <p style={{fontSize: 'clamp(.01rem, 1.2vw + 0.350rem, 1.875rem)'}}>Use Complex Passwords</p>
-            <p style={{fontSize: 'clamp(.01rem, 1.1vw + 0.350rem, 1.775rem)', fontWeight: "lighter"}}>Try using complex passwords over simple, easy to remember passwords.</p>
-          </div>
-          {/*Second IMAGE*/}
-          <div className={`goodp-image ${gp2Hover ? "expanded" : ""}`}>
-            <img onMouseEnter={handleGP2enter} onMouseLeave={handleGP2leave} className='goodp-img' src={'show.png'} alt='img 2'></img>
-            <p style={{fontSize: 'clamp(.01rem, 1.2vw + 0.350rem, 1.875rem)'}}>Enable MFA</p>
-            <p style={{fontSize: 'clamp(.01rem, 1.1vw + 0.350rem, 1.775rem)', fontWeight: "lighter"}}>Try using complex passwords over simple, easy to remember passwords.</p>
-          </div>
-          {/*Third IMAGE*/}
-          <div className={`goodp-image ${gp3Hover ? "expanded" : ""}`}>
-            <img onMouseEnter={handleGP3enter} onMouseLeave={handleGP3leave} className='goodp-img' src={'show.png'} alt='img 3'></img>
-            <p style={{fontSize: 'clamp(.01rem, 1.2vw + 0.350rem, 1.875rem)'}}>Don't Reuse Passwords</p>
-            <p style={{fontSize: 'clamp(.01rem, 1.1vw + 0.350rem, 1.775rem)', fontWeight: "lighter"}}>Try using complex passwords over simple, easy to remember passwords.</p>
-          </div>
-        </div>
-        
-        {/*SECOND ROW*/}
-        <div className="goodp-sub">
+          <div className="goodp-col">
+            <div className={`goodp-image ${gp1Hover ? "expanded" : ""}`}>
+              <img onMouseEnter={handleGP1enter} onMouseLeave={handleGP1leave} className={`goodp-img ${img1Hover}`} src={'show.png'} alt='img 1'></img>
+              <p style={{fontSize: 'clamp(.01rem, 1.2vw + 0.350rem, 1.875rem)'}}>Use Complex Passwords</p>
+              <p style={{fontSize: 'clamp(.01rem, 1.1vw + 0.350rem, 1.775rem)', fontWeight: "lighter"}}>Try using complex passwords over simple, easy to remember passwords.</p>
+            </div>
           {/*Fourth IMAGE*/}
           <div className={`goodp-image ${gp4Hover ? "expanded" : ""}`}>
             <img onMouseEnter={handleGP4enter} onMouseLeave={handleGP4leave} className='goodp-img' src={'show.png'} alt='img 4'></img>
             <p style={{fontSize: 'clamp(.01rem, 1.2vw + 0.350rem, 1.875rem)'}}>Don't Let Browsers Save Your Passwords</p>
+            <p style={{fontSize: 'clamp(.01rem, 1.1vw + 0.350rem, 1.775rem)', fontWeight: "lighter"}}>Try using complex passwords over simple, easy to remember passwords.</p>
+          </div>
+            
+          </div>
+          <div className="goodp-col">
+          {/*Second IMAGE*/}
+          <div className={`goodp-image ${gp2Hover ? "expanded" : ""}`}>
+            <img onMouseEnter={handleGP2enter} onMouseLeave={handleGP2leave} className='goodp-img' src={'show.png'} alt='img 2'></img>
+            <p style={{fontSize: 'clamp(.01rem, 1.2vw + 0.350rem, 1.875rem)'}}>Enable MFA</p>
             <p style={{fontSize: 'clamp(.01rem, 1.1vw + 0.350rem, 1.775rem)', fontWeight: "lighter"}}>Try using complex passwords over simple, easy to remember passwords.</p>
           </div>
           {/*Fifth IMAGE*/}
@@ -299,13 +293,27 @@ function FAQ() {
             <p style={{fontSize: 'clamp(.01rem, 1.2vw + 0.350rem, 1.875rem)'}}>Don't Share Passwords</p>
             <p style={{fontSize: 'clamp(.01rem, 1.1vw + 0.350rem, 1.775rem)', fontWeight: "lighter"}}>Try using complex passwords over simple, easy to remember passwords.</p>
           </div>
+          </div>
+          <div className="goodp-col">
+          {/*Third IMAGE*/}
+          <div className={`goodp-image ${gp3Hover ? "expanded" : ""}`}>
+            <img onMouseEnter={handleGP3enter} onMouseLeave={handleGP3leave} className='goodp-img' src={'show.png'} alt='img 3'></img>
+            <p style={{fontSize: 'clamp(.01rem, 1.2vw + 0.350rem, 1.875rem)'}}>Don't Reuse Passwords</p>
+            <p style={{fontSize: 'clamp(.01rem, 1.1vw + 0.350rem, 1.775rem)', fontWeight: "lighter"}}>Try using complex passwords over simple, easy to remember passwords.</p>
+          </div>
           {/*Sixth IMAGE*/}
           <div className={`goodp-image ${gp6Hover ? "expanded" : ""}`}>
             <img onMouseEnter={handleGP6enter} onMouseLeave={handleGP6leave} className='goodp-img' src={'show.png'} alt='img 6'></img>
             <p style={{fontSize: 'clamp(.01rem, 1.2vw + 0.350rem, 1.875rem)'}}>Physical Instead of Digital Copies</p>
             <p style={{fontSize: 'clamp(.01rem, 1.1vw + 0.350rem, 1.775rem)', fontWeight: "lighter"}}>Try using complex passwords over simple, easy to remember passwords.</p>
           </div>
+          </div>
         </div>
+        
+        {/*SECOND ROW*/}
+        {/* <div className="goodp-sub"> */}
+          {/*Fourth IMAGE*/}
+        {/* </div> */}
       </h1>
 
       {/* ===== FAQ SECTION ===== */}

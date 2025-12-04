@@ -67,6 +67,11 @@
   width: 5rem;
 }
 
+.goodp-col {
+  display: flex;
+  flex-direction: column;
+  /* border: solid red; */
+}
 .default-image {
   background-color: transparent;
 }
