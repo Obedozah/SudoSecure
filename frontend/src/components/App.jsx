@@ -6,7 +6,6 @@ import './App.css'
 function App() {
     return (
         <div className="app">
-            <title>SudoSecure</title>
             <header>
                 <Header />
             </header>
