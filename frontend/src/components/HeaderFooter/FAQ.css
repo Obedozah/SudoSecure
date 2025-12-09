@@ -5,7 +5,7 @@
   text-align: center;
   color: white;
   /* background: linear-gradient(to bottom, #677b9cff, #1c1e1fff); */
-  height: 800px;
+  /* height: 800px; */
   overflow: hidden;
 }
 
@@ -24,6 +24,7 @@
   justify-content: center;
   top: 60px;
   /* background-color: blue; */
+  flex-wrap: wrap;
 }
 
 /*expanded thing*/
@@ -39,7 +40,7 @@
 .goodp-image.expanded,
 .goodp-image
 {
-  height: 300px;
+  height: 18.75rem;
 }
 
 
@@ -53,7 +54,7 @@
   align-items: center;
   padding: 3rem;
   width: 500px;
-  height: 102px;
+  height: 6.375rem;
   background-color: transparent;
   /* border: solid; */
   overflow: hidden;

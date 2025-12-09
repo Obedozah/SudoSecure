@@ -269,13 +269,13 @@ function FAQ() {
           <div className="goodp-col">
             <div className={`goodp-image ${gp1Hover ? "expanded" : ""}`}>
               <img onMouseEnter={handleGP1enter} onMouseLeave={handleGP1leave} className={`goodp-img ${img1Hover}`} src={'img1.png'} alt='img 1'></img>
-              <p style={{fontSize: 'clamp(.01rem, 1.2vw + 0.350rem, 1.875rem)'}}>Use Complex Passwords</p>
+              <p style={{fontSize: 'clamp(.01rem, 1.2vw + 0.70rem, 1.875rem)'}}>Use Complex Passwords</p>
               <p style={{fontSize: 'clamp(.01rem, 1.1vw + 0.350rem, 1.775rem)', fontWeight: "lighter"}}>Try using complex passwords over simple, easy to remember passwords.</p>
             </div>
           {/*Fourth IMAGE*/}
           <div className={`goodp-image ${gp4Hover ? "expanded" : ""}`}>
             <img onMouseEnter={handleGP4enter} onMouseLeave={handleGP4leave} className='goodp-img' src={'img2.png'} alt='img 2'></img>
-            <p style={{fontSize: 'clamp(.01rem, 1.2vw + 0.350rem, 1.875rem)'}}>Disable Browser Password Saving</p>
+            <p style={{fontSize: 'clamp(.01rem, 1.2vw + 0.70rem, 1.875rem)'}}>Disable Browser Password Saving</p>
             <p style={{fontSize: 'clamp(.01rem, 1.1vw + 0.350rem, 1.775rem)', fontWeight: "lighter"}}>Try using complex passwords over simple, easy to remember passwords.</p>
           </div>
             
@@ -284,13 +284,13 @@ function FAQ() {
           {/*Second IMAGE*/}
           <div className={`goodp-image ${gp2Hover ? "expanded" : ""}`}>
             <img onMouseEnter={handleGP2enter} onMouseLeave={handleGP2leave} className='goodp-img' src={'img3.png'} alt='img 3'></img>
-            <p style={{fontSize: 'clamp(.01rem, 1.2vw + 0.350rem, 1.875rem)'}}>Enable MFA</p>
+            <p style={{fontSize: 'clamp(.01rem, 1.2vw + 0.70rem, 1.875rem)'}}>Enable MFA</p>
             <p style={{fontSize: 'clamp(.01rem, 1.1vw + 0.350rem, 1.775rem)', fontWeight: "lighter"}}>Try using complex passwords over simple, easy to remember passwords.</p>
           </div>
           {/*Fifth IMAGE*/}
           <div className={`goodp-image ${gp5Hover ? "expanded" : ""}`}>
             <img onMouseEnter={handleGP5enter} onMouseLeave={handleGP5leave} className='goodp-img' src={'img4.png'} alt='img 4' ></img>
-            <p style={{fontSize: 'clamp(.01rem, 1.2vw + 0.350rem, 1.875rem)'}}>Don't Share Passwords</p>
+            <p style={{fontSize: 'clamp(.01rem, 1.2vw + 0.70rem, 1.875rem)'}}>Don't Share Passwords</p>
             <p style={{fontSize: 'clamp(.01rem, 1.1vw + 0.350rem, 1.775rem)', fontWeight: "lighter"}}>Try using complex passwords over simple, easy to remember passwords.</p>
           </div>
           </div>
@@ -298,22 +298,23 @@ function FAQ() {
           {/*Third IMAGE*/}
           <div className={`goodp-image ${gp3Hover ? "expanded" : ""}`}>
             <img onMouseEnter={handleGP3enter} onMouseLeave={handleGP3leave} className='goodp-img' src={'img5.png'} alt='img 5'></img>
-            <p style={{fontSize: 'clamp(.01rem, 1.2vw + 0.350rem, 1.875rem)'}}>Don't Reuse Passwords</p>
+            <p style={{fontSize: 'clamp(.01rem, 1.2vw + 0.70rem, 1.875rem)'}}>Don't Reuse Passwords</p>
             <p style={{fontSize: 'clamp(.01rem, 1.1vw + 0.350rem, 1.775rem)', fontWeight: "lighter"}}>Try using complex passwords over simple, easy to remember passwords.</p>
           </div>
           {/*Sixth IMAGE*/}
           <div className={`goodp-image ${gp6Hover ? "expanded" : ""}`}>
             <img onMouseEnter={handleGP6enter} onMouseLeave={handleGP6leave} className='goodp-img' src={'img6.png'} alt='img 6'></img>
-            <p style={{fontSize: 'clamp(.01rem, 1.2vw + 0.350rem, 1.875rem)'}}>Physical Instead of Digital Copies</p>
+            <p style={{fontSize: 'clamp(.01rem, 1.2vw + 0.70rem, 1.875rem)'}}>Physical Instead of Digital Copies</p>
             <p style={{fontSize: 'clamp(.01rem, 1.1vw + 0.350rem, 1.775rem)', fontWeight: "lighter"}}>Try using complex passwords over simple, easy to remember passwords.</p>
           </div>
           </div>
         </div>
         
         {/*SECOND ROW*/}
-        {/* <div className="goodp-sub"> */}
+        <div className="goodp-sub">
           {/*Fourth IMAGE*/}
-        {/* </div> */}
+          <p style={{height: '15px'}}></p>
+        </div>
       </h1>
 
       {/* ===== FAQ SECTION ===== */}
