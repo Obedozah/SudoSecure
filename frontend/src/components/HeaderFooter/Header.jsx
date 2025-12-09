@@ -55,6 +55,7 @@ function Header() {
         : zoomLevel <= 250
         ? "178px"
         : "53px":'53px',
+    textShadow: "0 4px 12px rgba(40, 40, 40, 1)"
   };
 
   // const updateWinLen=()=>{
@@ -131,12 +132,10 @@ function Header() {
       <h1 className="header-bottom">
         <b
           className="password-title"
-          style={{
-            height: zoomLevel < 400 ? zoomLevel < 250? "60px": '80px' : "110px",
-            top: "0px",
-          }}
         >
-          <b>HOW SECURE IS YOUR PASSWORD?</b>
+          <b>
+            HOW SECURE IS YOUR PASSWORD?
+          </b>
         </b>
       </h1>
     </header>

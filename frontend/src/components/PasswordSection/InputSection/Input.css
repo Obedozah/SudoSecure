@@ -25,6 +25,7 @@
     padding: 1.5rem 1.5rem;
     width: 100%;
     height: 100%;
+    text-shadow: 0 4px 12px rgb(50, 50, 50);
 
     background-color: #f5f7f927;
     cursor: pointer;

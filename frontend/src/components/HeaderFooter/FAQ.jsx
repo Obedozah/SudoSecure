@@ -259,7 +259,7 @@ function FAQ() {
 
 
     return (
-    <header style={{background: 'linear-gradient(to bottom, rgba(48, 51, 58, .5), rgba(34, 37, 44, 0.5))'}}>
+    <header style={{background: 'linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgb(39, 39, 39, 0.5))'}}>
       {/* ===== GOOD PRACTICES ===== */}
       <h1 id="GoodP" className="goodp-section">
         <b className="goodp-title">Good Practices</b>
