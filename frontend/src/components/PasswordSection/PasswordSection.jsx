@@ -1,10 +1,9 @@
-import Input from './InputSection/Input';
-import './PasswordSection.css';
-import PasswordContent from './PasswordContent/PasswordContent'
+import Input from "./InputSection/Input";
+import "./PasswordSection.css";
+import PasswordContent from "./PasswordContent/PasswordContent";
 import React, { useState, useEffect } from "react";
 
-function PasswordSection() { 
-  
+function PasswordSection({ serverdata, setServerdata }) {
   // Read PW Input
   const [inputValue, setInputValue] = useState("");
 
@@ -17,7 +16,7 @@ function PasswordSection() {
     level: level,
     label: label,
     time: time,
-    strengthColor: strengthColor
+    strengthColor: strengthColor,
   };
 
   // Variables for Display Formatting
@@ -36,7 +35,7 @@ function PasswordSection() {
     hasLower: hasLower,
     hasNumber: hasNumber,
     hasSpecial: hasSpecial,
-    hasRepeatedChars: hasRepeatedChars
+    hasRepeatedChars: hasRepeatedChars,
   };
 
   // HIBP Variables
@@ -59,72 +58,85 @@ function PasswordSection() {
     setRepeatedChars(repeatedChars.length === 0);
   }, [inputValue]);
 
-
-  // useEffect TEMPLATE for Evaluations **CHANGE THESE TO ACTUAL ALGORITHMS** need all these states for pw observers 
+  // useEffect TEMPLATE for Evaluations **CHANGE THESE TO ACTUAL ALGORITHMS** need all these states for pw observers
   // Change time to actual calculated estimates
-  useEffect(() => {
-      if (!inputValue) {
-          setLevel(0);
-          setLabel("");
-          setTime("");
-          setStrengthColor("#ffffffff");
-        return;
-      }
-      if (inputValue.length < 6) {
-          setLevel(0);
-          setLabel("Weak");
-          setTime("10 Minutes");
-          setStrengthColor("#cd5050ff");
-      }
-      else if (inputValue.length < 11){
-          setLevel(1);
-          setLabel("Okay");
-          setTime("10 Days");
-          setStrengthColor("#c3c841ff");
-      }
-      else if (inputValue.length < 16){
-          setLevel(2);
-          setLabel("Good");
-          setTime("10 Years");
-          setStrengthColor("#2aae37ff");
-      }
-      else {
-          setLevel(3);
-          setLabel("Strong");
-          setTime("Forever");
-          setStrengthColor("#3980eaff");
-      }
-  }, [inputValue]);
 
-  // useEffect TEMPLATE for HIBP **CHANGE THESE TO ACTUAL ALGORITHMS**
+  useEffect(() => {
+    if (!serverdata) {
+      setLevel(0);
+      setLabel("");
+      setTime("");
+      setStrengthColor("");
+      return;
+    }
+
+    const { passScore, passTime, time_unit } = serverdata;
+
+    if (passScore === "Not a Password") {
+      setLevel(0);
+      setLabel("Not a Password");
+      setTime("Instantly");
+      setStrengthColor("#ffffffff");
+    } else if (passScore === "Weak") {
+      setLevel(0);
+      setLabel("Weak");
+      setTime(passTime + " " + time_unit);
+      setStrengthColor("#cd5050ff");
+    } else if (passScore === "Okay") {
+      setLevel(1);
+      setLabel("Okay");
+      setTime(passTime + " " + time_unit);
+      setStrengthColor("#c3c841ff");
+    } else if (passScore === "Good") {
+      setLevel(2);
+      setLabel("Good");
+      setTime(passTime + " " + time_unit);
+      setStrengthColor("#2aae37ff");
+    } else {
+      setLevel(3);
+      setLabel("Strong");
+      setTime(passTime + " " + time_unit);
+      setStrengthColor("#3980eaff");
+    }
+  }, [serverdata]);
+
   // hibp variable is number of breaches found if empty then not pwned
   useEffect(() => {
-    if (level === 0) {
-      setHibp("1000");
-    }
-    else if (level === 1) {
-      setHibp("100");
-    }
-    else if (level === 2) {
-      setHibp("10");
-    }
-    else {
+    if (!serverdata) {
       setHibp("");
+      return;
     }
-  }, [level]);
+
+    const { pwnedCount } = serverdata;
+
+    if (pwnedCount) {
+      setHibp(
+        `This password has been Pwned! It was found in ${pwnedCount} breaches. Please change Password!`
+      );
+    } else {
+      setHibp("Not Pwned!");
+    }
+  }, [serverdata]);
+
+  const { feedback } = serverdata || {};
 
   return (
     <section className="password-section">
       {/*Input Section*/}
       <div className="input-content">
-        <Input value={ inputValue } setValue={ setInputValue } strengthColor={ strengthColor }/>
+        <Input
+          value={inputValue}
+          setValue={setInputValue}
+          strengthColor={strengthColor}
+          setServerdata={setServerdata}
+        />
       </div>
       <div className={`password-wrapper ${expanded ? "expanded" : ""}`}>
         <PasswordContent
-          inputValue={ inputValue }
-          evaluations={ evaluations }
-          hibp={ hibp }
-          suggestions={ suggestions }
+          inputValue={inputValue}
+          evaluations={evaluations}
+          hibp={hibp}
+          suggestions={{ ...suggestions, feedback }}
         />
       </div>
     </section>
