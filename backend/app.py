@@ -39,7 +39,7 @@ def check_password():
     feedback = result['feedback']['suggestions']
     passTime = result['crack_times_seconds']['offline_slow_hashing_1e4_per_second']
     time_unit = "seconds"
-    word = result['sequence'][0]['matched_word']
+    # word = result['sequence'][0]['matched_word']
     rank = result['sequence'][0]['rank']
 
     #booleans for the data
@@ -76,7 +76,7 @@ def check_password():
     print(f"Pwned Count: {pwnedCount}")
     print(f"Score: {passScore}")
     print(f"Crack Time (seconds): {passTime} {time_unit}")
-    print(f"Common Word Found: {word}")
+    # print(f"Common Word Found: {word}")
     print(f"Word Rank: {rank}")
 
     return jsonify({"message": "Password evaluated"

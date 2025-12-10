@@ -10,7 +10,7 @@ function Input({ value, setValue, strengthColor, setServerdata }) {
 
   async function getPasswordInputValue() {
     try {
-      const response = await fetch("http://localhost:5000/check_password", {
+      const response = await fetch("http://127.0.0.1:5000/check_password", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
