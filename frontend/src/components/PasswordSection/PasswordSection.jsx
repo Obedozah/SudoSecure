@@ -29,6 +29,7 @@ function PasswordSection({ serverdata, setServerdata }) {
   const [hasSpecial, setHasSpecial] = useState(false);
   const [hasLength, setHasLength] = useState(false);
   const [hasRepeatedChars, setRepeatedChars] = useState(true);
+  const [hasCommonWords, setHasCommonWords] = useState(false);
   const suggestions = {
     hasLength: hasLength,
     hasUpper: hasUpper,
@@ -36,6 +37,7 @@ function PasswordSection({ serverdata, setServerdata }) {
     hasNumber: hasNumber,
     hasSpecial: hasSpecial,
     hasRepeatedChars: hasRepeatedChars,
+    hasCommonWords: hasCommonWords,
   };
 
   // HIBP Variables
@@ -49,6 +51,11 @@ function PasswordSection({ serverdata, setServerdata }) {
     const numberMatches = inputValue.match(/[0-9]/g) || [];
     const specialMatches = inputValue.match(/[^A-Za-z0-9]/g) || [];
     const repeatedChars = inputValue.match(/(.)\1{2,}/g) || [];
+    const commonWords = !!(
+      serverdata &&
+      serverdata.words &&
+      serverdata.words.length > 0
+    );
 
     setHasLength(lengthValid);
     setHasUpper(upperMatches.length >= 2);
@@ -56,11 +63,10 @@ function PasswordSection({ serverdata, setServerdata }) {
     setHasNumber(numberMatches.length >= 3);
     setHasSpecial(specialMatches.length >= 1);
     setRepeatedChars(repeatedChars.length === 0);
-  }, [inputValue]);
+    setHasCommonWords(commonWords);
+  }, [inputValue, serverdata]);
 
-  // useEffect TEMPLATE for Evaluations **CHANGE THESE TO ACTUAL ALGORITHMS** need all these states for pw observers
-  // Change time to actual calculated estimates
-
+  // Uses ZXCVBN to calc time and strength
   useEffect(() => {
     if (!serverdata) {
       setLevel(0);
@@ -119,6 +125,7 @@ function PasswordSection({ serverdata, setServerdata }) {
   }, [serverdata]);
 
   const { feedback } = serverdata || {};
+  const words = serverdata?.words || [];
 
   return (
     <section className="password-section">
@@ -136,7 +143,7 @@ function PasswordSection({ serverdata, setServerdata }) {
           inputValue={inputValue}
           evaluations={evaluations}
           hibp={hibp}
-          suggestions={{ ...suggestions, feedback }}
+          suggestions={{ ...suggestions, feedback, words }}
         />
       </div>
     </section>

@@ -17,6 +17,13 @@ function Suggestions({ suggestions }) {
         )}
         {!suggestions.hasRepeatedChars && <li>Avoid 3-repeated characters</li>}
         {suggestions && <li>Things you can add: {suggestions.feedback} </li>}
+        {suggestions.hasCommonWords && (
+          <li>
+            Common Words have been Found:{" "}
+            {suggestions.words.map((word) => word.matched_word).join(", ")} it
+            is recommended to avoid using common words in your password.
+          </li>
+        )}
         {suggestions.hasUpper &&
           suggestions.hasLower &&
           suggestions.hasNumber &&
