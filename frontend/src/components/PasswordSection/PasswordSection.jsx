@@ -111,7 +111,7 @@ function PasswordSection({ serverdata, setServerdata }) {
 
     if (pwnedCount) {
       setHibp(
-        `This password has been Pwned! It was found in ${pwnedCount} breaches. Please change Password!`
+        `Pwned! Found in ${pwnedCount} breaches. Change Immediately!`
       );
     } else {
       setHibp("Not Pwned!");

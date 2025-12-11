@@ -5,31 +5,32 @@ function Suggestions({ suggestions }) {
     <section className="suggestions-section">
       <hr className="whiteLine" />
       <h1 className="suggestions-header">Suggestions:</h1>
-      <ul className="suggestions-list">
-        {!suggestions.hasUpper && <li>Include at least 2 uppercase letters</li>}
-        {!suggestions.hasLower && <li>Include at least 2 lowercase letters</li>}
-        {!suggestions.hasNumber && <li>Include at least 3 numbers</li>}
-        {!suggestions.hasSpecial && (
-          <li>Include at least 1 special characters</li>
-        )}
-        {!suggestions.hasLength && (
-          <li>Make your password at least 16 characters long</li>
-        )}
-        {!suggestions.hasRepeatedChars && <li>Avoid 3-repeated characters</li>}
-        {suggestions && <li>Things you can add: {suggestions.feedback} </li>}
-        {suggestions.hasCommonWords && (
-          <li>
-            Common Words have been Found:{" "}
-            {suggestions.words.map((word) => word.matched_word).join(", ")} it
-            is recommended to avoid using common words in your password.
-          </li>
-        )}
-        {suggestions.hasUpper &&
-          suggestions.hasLower &&
-          suggestions.hasNumber &&
-          suggestions.hasSpecial &&
-          suggestions.hasLength && <li>Minimum Requirements Met!</li>}
-      </ul>
+            <ul className="suggestions-list">
+            {!suggestions.hasUpper && <li>Include at least 2 uppercase letters</li>}
+            {!suggestions.hasLower && <li>Include at least 2 lowercase letters</li>}
+            {!suggestions.hasNumber && <li>Include at least 3 numbers</li>}
+            {!suggestions.hasSpecial && <li>Include at least 1 special characters</li>}
+            {!suggestions.hasLength && <li>Include at least 16 characters</li>}
+            {!suggestions.hasRepeatedChars && <li>Avoid 3-repeated characters</li>}
+
+            {suggestions.feedback && suggestions.feedback.length > 0 &&
+                suggestions.feedback.map((item, index) => <li key={index}>{item}</li>)
+            }
+
+            {suggestions.hasCommonWords && (
+                <li>
+                Common Words have been Found:{" "}
+                {suggestions.words.map((word) => word.matched_word).join(", ")} it
+                is recommended to avoid using common words in your password.
+                </li>
+            )}
+
+            {suggestions.hasUpper &&
+            suggestions.hasLower &&
+            suggestions.hasNumber &&
+            suggestions.hasSpecial &&
+            suggestions.hasLength && <li>Minimum Requirements Met!</li>}
+            </ul>
       <h2 className="minimum-requirements">
         <span
           style={{ color: suggestions.hasUpper ? "#2aae37ff" : "#cd5050ff" }}
