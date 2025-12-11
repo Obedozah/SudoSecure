@@ -2,7 +2,7 @@ import "./Evaluations.css";
 function Evaluations({ evaluations }) {
   return (
     <section className="evaluations-section">
-      <h1>Strength {evaluations.label}</h1>
+      <h1>Strength: {evaluations.label}</h1>
       <div className="strength-bar">
         <div
           className="strength-bar-level"
