@@ -1,7 +1,6 @@
 import Header from "./HeaderFooter/Header";
-import React, { useState } from "react";
+import { useState } from "react";
 import FAQ from "./HeaderFooter/FAQ";
-import Input from "./PasswordSection/InputSection/Input";
 import PasswordSection from "./PasswordSection/PasswordSection";
 import "./App.css";
 
@@ -21,8 +20,6 @@ function App() {
         />
         <FAQ />
       </main>
-
-      <Input setServerdata={setServerdata} />
     </div>
   );
 }
