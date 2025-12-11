@@ -1,4 +1,4 @@
-Flask==2.3.3
-flask-cors==3.1.0
-zxcvbn==4.4.28
-requests==2.32.0
+Flask==3.1.2
+flask-cors==6.0.1
+zxcvbn==4.5.0
+requests==2.32.5
