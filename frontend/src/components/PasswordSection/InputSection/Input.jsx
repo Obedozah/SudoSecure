@@ -50,7 +50,7 @@ function Input({ value, setValue, strengthColor, setServerdata }) {
         id="password-input" //ID needed to send to backend
         placeholder="Enter your password"
         value={value}
-        onChange={(e) => setValue(e.target.value)}
+        onChange={(e) => setValue(e.target.value.replace(/\s/g, ""))}
         style={{ color: strengthColor }}
       ></input>
       <img
