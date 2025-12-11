@@ -43,7 +43,7 @@
 .goodp-image.expanded,
 .goodp-image
 {
-  height: 18.75rem;
+  height: 19.3rem;
 }
 
 
@@ -90,6 +90,13 @@
   box-shadow: 0 0 15px  rgba(221, 221, 221, 0.11), 0 0 25px rgba(221, 221, 221, 0.11), 0 0 35px rgba(221, 221, 221, 0.11); /* Red glow */
   animation: pulse-glow 2s infinite alternate;
 }
+
+.goodp-img-text{
+  position: relative;
+  top: 1.37rem;
+  font-size: clamp(.01rem, 1vw + 0.250rem, 1.67rem); 
+  font-weight: lighter;
+}
 /* ========== FAQ SECTION ========== */
 
 .faq-section {
@@ -133,7 +140,8 @@
 .faq-row.expanded,
 .faq-row
 {
-  height: 200px;
+  height: clamp(8rem, 8vw + 2.50rem,12rem);
+  margin-bottom: 0px;
 }
 
 
@@ -142,26 +150,29 @@
   justify-content: top;
   align-items: center;
   flex-direction: column;
+  margin: 15px;
   height: 50px;
   position: relative;
   top: 0px;
   width: 1200px;
   overflow: hidden;
-  /* background-color: rgba(0, 0, 1,0.5); */
-  /* border: solid; */
-  transition: height 1s ease;
+  /* background-color: rgba(0, 0, 1,0.5);
+  border: solid; */
+  transition: height 1s ease, margin-bottom 1s ease;;
+  /* transition: margin-bottom 1s ease; */
 }
 
 .faq-btn {
   width: 80%;
-  font-size: clamp(.01rem, 1.8vw + 0.350rem, 1.875rem);
+  font-size: clamp(.01rem, 1.5vw + 0.250rem, 1.675rem);
   letter-spacing: clamp(0rem, 1.8vw + 0.05rem, .25rem);
-  background-color: rgb(38, 48, 66);
+  background-color: rgb(49, 51, 61);
   color: white;
   position: relative;
-  border: 2px solid rgb(47, 54, 59);
+  border: 2px solid rgb(40, 41, 44);
   align-items: center;
-  transition: 0.2s border;
+  transition: 0.3s border;
+  vertical-align: center;
   height: 40px;
   text-align: center;
   top: 0px;
@@ -169,7 +180,7 @@
 }
 
 .default-border {
-  border-color: #3d4a55ff;
+  border-color: rgb(59, 60, 65);
 }
 
 .faq-btn:hover {
@@ -180,30 +191,31 @@
 
 .faq-plus {
   position: relative;
-  left:93.5%;
+  left:96.5%;
   top: -2.2em;
   /* background-color: red; */
   width: 17px;
   height: 20px;
   text-align: center;
   justify-content: center;
-  font-size: clamp(.1rem, 1.8vw + 0.450rem, 1.875rem);
+  font-size: clamp(.1rem,  1.5vw + 0.250rem, 1.675rem);
   cursor: pointer;
 }
 
 /* ========== FAQ ANSWERS ========== */
 
 .faq-answer {
-  background-color: rgb(40, 51, 61);
+  background-color: rgb(62, 64, 75);
   position: relative;
   margin: 0px;
-  font-size: clamp(.01rem, 1.8vw + 0.469rem, 1.50rem);
+  font-size: clamp(.01rem, 1.4vw + 0.250rem, 1.5rem);
   font-weight: 450;
   color: white;
   letter-spacing: 0px;
   padding: 0px;
   /* overflow: auto; */
   text-align: center;
+  transition: visibility .696s;
   width: 79%;
-  height: 170px;
+  height: clamp(6rem, 4.3vw + 2.50rem,10.625rem);
 }

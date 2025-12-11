@@ -270,13 +270,13 @@ function FAQ() {
             <div className={`goodp-image ${gp1Hover ? "expanded" : ""}`}>
               <img onMouseEnter={handleGP1enter} onMouseLeave={handleGP1leave} className={`goodp-img ${img1Hover}`} src={'img1.png'} alt='img 1'></img>
               <p style={{fontSize: 'clamp(.01rem, 1.2vw + 0.70rem, 1.875rem)'}}>Use Complex Passwords</p>
-              <p style={{fontSize: 'clamp(.01rem, 1.1vw + 0.350rem, 1.775rem)', fontWeight: "lighter"}}>Try using complex passwords over simple, easy to remember passwords.</p>
+              <p className="goodp-img-text">Try using complex passwords over simple, easy to remember passwords.</p>
             </div>
           {/*Fourth IMAGE*/}
           <div className={`goodp-image ${gp4Hover ? "expanded" : ""}`}>
             <img onMouseEnter={handleGP4enter} onMouseLeave={handleGP4leave} className='goodp-img' src={'img2.png'} alt='img 2'></img>
             <p style={{fontSize: 'clamp(.01rem, 1.2vw + 0.70rem, 1.875rem)'}}>Disable Browser Password Saving</p>
-            <p style={{fontSize: 'clamp(.01rem, 1.1vw + 0.350rem, 1.775rem)', fontWeight: "lighter"}}>Try using complex passwords over simple, easy to remember passwords.</p>
+            <p className="goodp-img-text">Don't let browers save your passwords when logging into websites.</p>
           </div>
             
           </div>
@@ -285,13 +285,13 @@ function FAQ() {
           <div className={`goodp-image ${gp2Hover ? "expanded" : ""}`}>
             <img onMouseEnter={handleGP2enter} onMouseLeave={handleGP2leave} className='goodp-img' src={'img3.png'} alt='img 3'></img>
             <p style={{fontSize: 'clamp(.01rem, 1.2vw + 0.70rem, 1.875rem)'}}>Enable MFA</p>
-            <p style={{fontSize: 'clamp(.01rem, 1.1vw + 0.350rem, 1.775rem)', fontWeight: "lighter"}}>Try using complex passwords over simple, easy to remember passwords.</p>
+            <p className="goodp-img-text">Try setting up multi-factor authentican for applications you regularly use.</p>
           </div>
           {/*Fifth IMAGE*/}
           <div className={`goodp-image ${gp5Hover ? "expanded" : ""}`}>
             <img onMouseEnter={handleGP5enter} onMouseLeave={handleGP5leave} className='goodp-img' src={'img4.png'} alt='img 4' ></img>
             <p style={{fontSize: 'clamp(.01rem, 1.2vw + 0.70rem, 1.875rem)'}}>Don't Share Passwords</p>
-            <p style={{fontSize: 'clamp(.01rem, 1.1vw + 0.350rem, 1.775rem)', fontWeight: "lighter"}}>Try using complex passwords over simple, easy to remember passwords.</p>
+            <p className="goodp-img-text">Don't share your passwords to people or websites online, especially if they look sketchy.</p>
           </div>
           </div>
           <div className="goodp-col">
@@ -299,13 +299,13 @@ function FAQ() {
           <div className={`goodp-image ${gp3Hover ? "expanded" : ""}`}>
             <img onMouseEnter={handleGP3enter} onMouseLeave={handleGP3leave} className='goodp-img' src={'img5.png'} alt='img 5'></img>
             <p style={{fontSize: 'clamp(.01rem, 1.2vw + 0.70rem, 1.875rem)'}}>Don't Reuse Passwords</p>
-            <p style={{fontSize: 'clamp(.01rem, 1.1vw + 0.350rem, 1.775rem)', fontWeight: "lighter"}}>Try using complex passwords over simple, easy to remember passwords.</p>
+            <p className="goodp-img-text">Try to avoid using the same or similar password across all of your accounts.</p>
           </div>
           {/*Sixth IMAGE*/}
           <div className={`goodp-image ${gp6Hover ? "expanded" : ""}`}>
             <img onMouseEnter={handleGP6enter} onMouseLeave={handleGP6leave} className='goodp-img' src={'img6.png'} alt='img 6'></img>
             <p style={{fontSize: 'clamp(.01rem, 1.2vw + 0.70rem, 1.875rem)'}}>Physical Instead of Digital Copies</p>
-            <p style={{fontSize: 'clamp(.01rem, 1.1vw + 0.350rem, 1.775rem)', fontWeight: "lighter"}}>Try using complex passwords over simple, easy to remember passwords.</p>
+            <p className="goodp-img-text">Try to write down your password(s) on paper instead of in a document or app.</p>
           </div>
           </div>
         </div>
@@ -322,7 +322,7 @@ function FAQ() {
         id="FAQ"
         className="faq-section"
         style={{
-          height: zoomLevel < 300 ? "600px" : "900px",
+          height: zoomLevel < 300 ? "700px" : "750px",
         }}
       >
         <b
@@ -355,10 +355,12 @@ function FAQ() {
                   
                 }}
               >
-                The Hog Rider in Clash Royale is a fast, single-target troop that heads 
+                {/* The Hog Rider in Clash Royale is a fast, single-target troop that heads 
                   straight for buildings, leaping over rivers to reach them quickly. He deals 
                   solid melee damage and is often used as a win condition due to his speed and 
-                  ability to pressure towers efficiently.
+                  ability to pressure towers efficiently. */}
+                  A password checker is a website or application which takes a password and tells you aspects about it,
+                  such as the strength, how long it would take to crack, where it falls short, and even if it has been leaked (pwned).
               </p>
           </section>
 
@@ -383,10 +385,9 @@ function FAQ() {
                   visibility: q2Display,
                 }}
               >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
-                  commodo consequat. Duis aute irure dolor in reprehenderit.
+                Yes this website is safe, it does not store/save your password it
+                simply runs tests on it to give you an accurate rating on how strong and/or 
+                secure it is among other features.
               </p>
           </section>
 
@@ -409,9 +410,8 @@ function FAQ() {
                   visibility: q3Display,
                 }}
               >
-                Apple Bannana Cucumber Desert Emmett Faraway Great High-five Internet Joe
-                  Karat Lemons Minnetsota. Niagra Falls Orangutan Prerequisite Quintanilla 
-                  Rusty Southern Tires Umbrella Video Wires Xylophone Young Zootopia.
+                Theoretically, any password could get cracked or "hacked," but the stronger and more complex it is, the harder
+                it is to do so.
             </p>
           </section>
         
@@ -424,7 +424,7 @@ function FAQ() {
               className={`faq-btn ${q4Hover}`}
               // style={{  height: zoomLevel < 400 ? "40px" : "75px", }}
             >
-              CFAQ EUSTION 4?
+              How does the Strength Checker Work?
               <p className="faq-plus">{q4PlusDisplay}</p>
 
             </button>
@@ -434,9 +434,8 @@ function FAQ() {
                   visibility: q4Display,
                 }}
               >
-                Apple Bannana Cucumber Desert Emmett Faraway Great High-five Internet Joe
-                  Karat Lemons Minnetsota. Niagra Falls Orangutan Prerequisite Quintanilla 
-                  Rusty Southern Tires Umbrella Video Wires Xylophone Young Zootopia.
+                The strength checker on this website works by running a test on your password and using the results to determine
+                the strength of it and the time it would take to crack, among other things, based on said results.
             </p>
           </section>
         
@@ -449,7 +448,7 @@ function FAQ() {
               className={`faq-btn ${q5Hover}`}
               // style={{  height: zoomLevel < 400 ? "40px" : "75px", }}
             >
-              FAQ QUESTION 5d?
+              How do you know if my password has been PWNED?
               <p className="faq-plus">{q5PlusDisplay}</p>
 
             </button>
@@ -459,9 +458,8 @@ function FAQ() {
                   visibility: q5Display,
                 }}
               >
-                Apple Bannana Cucumber Desert Emmett Faraway Great High-five Internet Joe
-                  Karat Lemons Minnetsota. Niagra Falls Orangutan Prerequisite Quintanilla 
-                  Rusty Southern Tires Umbrella Video Wires Xylophone Young Zootopia.
+                SudoSecure uses an api to crossreference your password to databases of pwned passwords and then is able to
+                determine not only if it has been pwned, but also how many times (how many databases) it has been.
             </p>
           </section>
         
