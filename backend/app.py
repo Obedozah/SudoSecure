@@ -1,12 +1,16 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
+import os
 from zxcvbn import zxcvbn
 import hashlib
 import requests
 
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "http://localhost:3000"}})
+FRONTEND_URL = os.getenv("FRONTEND_URL", "http://localhost:3000")
+CORS(app, resources={r"/*": {"origins": FRONTEND_URL}})
 
+
+HIBP_API_URL = os.getenv("HIBP_API_URL", "https://api.pwnedpasswords.com/range/")
 HIBP_API_URL = "https://api.pwnedpasswords.com/range/"
 
 def check_pwned_password(password):
@@ -94,4 +98,4 @@ def check_password():
                    })
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
