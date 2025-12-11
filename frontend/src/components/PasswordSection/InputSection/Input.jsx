@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Input.css";
 
 function Input({ value, setValue, strengthColor, setServerdata }) {
@@ -7,22 +7,44 @@ function Input({ value, setValue, strengthColor, setServerdata }) {
   function toggleVisibility() {
     setVisibility(!visible);
   }
-
-  async function getPasswordInputValue() {
-    try {
-      const response = await fetch("http://127.0.0.1:5000/check_password", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ password: value }),
-      });
-      const passResult = await response.json();
-      console.log("Response from backend:", passResult);
-      setServerdata(passResult);
-    } catch (error) {
-      console.error("Error:", error);
+  useEffect(() => {
+    if (!value) {
+      setServerdata(null);
+      return;
     }
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => {
+      (async () => {
+        try {
+          const response = await fetch("http://127.0.0.1:5000/check_password", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ password: value }),
+            signal: controller.signal,
+          });
+
+          const passResult = await response.json();
+          console.log("Response from backend:", passResult);
+          setServerdata(passResult);
+        } catch (error) {
+          if (error.name === "AbortError") {
+            console.log("Error", error);
+          }
+        }
+      })();
+    }, 90);
+
+    return () => {
+      clearTimeout(timeoutId);
+      controller.abort();
+    };
+  }, [value, setServerdata]);
+
+  function getPasswordInputValue() {
+    // This function is intentionally left blank as the password input value
+    // is already being managed by the parent component through props.
   }
 
   return (
@@ -42,10 +64,6 @@ function Input({ value, setValue, strengthColor, setServerdata }) {
         alt="Hide/Show Icon"
         onClick={() => toggleVisibility(visible)}
       ></img>
-
-      <button className="check-button" onClick={getPasswordInputValue}>
-        Check Password
-      </button>
     </section>
   );
 }
