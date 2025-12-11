@@ -16,7 +16,7 @@ function Input({ value, setValue, strengthColor, setServerdata }) {
     const timeoutId = setTimeout(() => {
       (async () => {
         try {
-          const response = await fetch("http://127.0.0.1:5000/check_password", {
+          const response = await fetch("https://sudosecure.onrender.com/check_password", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
@@ -41,11 +41,6 @@ function Input({ value, setValue, strengthColor, setServerdata }) {
       controller.abort();
     };
   }, [value, setServerdata]);
-
-  function getPasswordInputValue() {
-    // This function is intentionally left blank as the password input value
-    // is already being managed by the parent component through props.
-  }
 
   return (
     <section className="input-section">
