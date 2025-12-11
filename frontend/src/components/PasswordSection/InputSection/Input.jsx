@@ -44,6 +44,12 @@ function Input({ value, setValue, strengthColor, setServerdata }) {
 
   return (
     <section className="input-section">
+        <img
+            className="show-image"
+            src={visible ? "hide.png" : "show.png"}
+            alt="Hide/Show Icon"
+            onClick={() => toggleVisibility(visible)}
+        ></img>
       <input
         type={visible ? "text" : "password"}
         className="input"
@@ -51,14 +57,13 @@ function Input({ value, setValue, strengthColor, setServerdata }) {
         placeholder="Enter your password"
         value={value}
         onChange={(e) => setValue(e.target.value.replace(/\s/g, ""))}
+        onPaste={(e) => {
+            e.preventDefault(); // prevent the default paste
+            const paste = e.clipboardData.getData("text").replace(/\s/g, "");
+            setValue(paste);
+        }}
         style={{ color: strengthColor }}
       ></input>
-      <img
-        className="show-image"
-        src={visible ? "hide.png" : "show.png"}
-        alt="Hide/Show Icon"
-        onClick={() => toggleVisibility(visible)}
-      ></img>
     </section>
   );
 }

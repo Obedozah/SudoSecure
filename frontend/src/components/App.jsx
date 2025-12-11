@@ -9,7 +9,7 @@ function App() {
 
   return (
     <div className="app">
-      <header>
+      <header className="header-section">
         <Header />
       </header>
 
@@ -18,7 +18,9 @@ function App() {
           serverdata={serverdata}
           setServerdata={setServerdata}
         />
-        <FAQ />
+        <div className="faq-section">
+            <FAQ />
+        </div>
       </main>
     </div>
   );

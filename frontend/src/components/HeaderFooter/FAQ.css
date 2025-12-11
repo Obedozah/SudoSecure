@@ -1,209 +1,219 @@
-/* ========== GENERAL LAYOUT ========== */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
+/* ---------- Container basics ---------- */
+.goodp-faq-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'DM Sans', sans-serif;
+    width: 60%;
+}
 
+/* ---------- GOOD PRACTICES ---------- */
 .goodp-section {
-  margin: 0;
-  text-align: center;
-  color: white;
-  /* background: linear-gradient(to bottom, #677b9cff, #1c1e1fff); */
-  /* height: 800px; */
-  overflow: hidden;
-  
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    text-align: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: rgba(81, 83, 85, 0.338);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    border: 1px solid rgba(255,255,255,0.313);
+    box-shadow: 0 4px 12px rgba(8,8,8,0.7);
+    padding-left: 7rem;
+    padding-right: 7rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    color: white;
+}
+
+.goodp-section h2 {
+    color: rgb(212, 233, 255);
 }
 
 .goodp-title {
-  font-size: 40px;
-  font-weight: 500;
-  position: relative;
-  top: 40px;
-    text-shadow: 0 4px 12px rgba(40, 40, 40, 1);
+    font-family: 'DM Sans', sans-serif;
+    font-size: clamp(2rem, 4vh, 5rem);
+    font-weight: 500;
+    margin: 0;
+    padding-top: 1.25rem;
+    text-shadow: 0 5px 10px rgba(40,40,40,1);
+    flex-wrap: wrap;
 }
 
 .goodp-sub {
-  display: flex;
-  flex-direction: row;
-  font-size: 16px;
-  position: relative;
-  justify-content: center;
-  top: 60px;
-  /* background-color: blue; */
-  flex-wrap: wrap;
-}
-
-/*expanded thing*/
-
-.goodp-image.expanded::before,
-.goodp-image::before
-{
-  position: relative;
-  content: "";
-  inset: 0;
-}
-
-.goodp-image.expanded,
-.goodp-image
-{
-  height: 18.75rem;
-}
-
-
-.goodp-image {
-  font-size: 14px;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  left: 0px;
-  justify-content: top;
-  align-items: center;
-  padding: 3rem;
-  width: 500px;
-  height: 6.375rem;
-  background-color: transparent;
-  /* border: solid; */
-  overflow: hidden;
-  transition: height 0.6s ease;
-  text-shadow: 0 4px 12px rgba(40, 40, 40, 1);
-}
-
-.goodp-img {
-  height: 5rem;
-  position: relative;
-  top:5px;
-  width: 5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
 }
 
 .goodp-col {
-  display: flex;
-  flex-direction: column;
-  /* border: solid red; */
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
 }
-.default-image {
-  background-color: transparent;
-}
-.goodp-img:hover {
-  width: 100px;
-  height: 100px;
-  top: 0px;
-  background-color: rgba(221, 221, 221, 0.15);
-  border-radius: 50px;
-  
-  box-shadow: 0 0 15px  rgba(221, 221, 221, 0.11), 0 0 25px rgba(221, 221, 221, 0.11), 0 0 35px rgba(221, 221, 221, 0.11); /* Red glow */
-  animation: pulse-glow 2s infinite alternate;
-}
-/* ========== FAQ SECTION ========== */
 
+.goodp-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+    height: 6.75rem;
+    padding: 1.25rem;
+    transition: height 0.6s ease;
+    text-shadow: 0 4px 12px rgba(40,40,40,1);
+    background: transparent;
+    border-radius: 10px;
+    overflow: auto;
+}
+
+.goodp-image.expanded {
+    height: 12rem;
+}
+
+.goodp-img {
+    width: 5rem;
+    height: 6rem;
+    object-fit: contain;
+    transition: all 0.25s ease;
+    margin-bottom: 0.25rem;
+    position: relative;
+    top: 5px;
+}
+
+.goodp-img:hover {
+    width: 6.25rem;
+    height: 6.25rem;
+    top: 0;
+    background-color: rgba(213,200,200,0.12);
+    border-radius: 50%;
+    box-shadow:
+    0 0 15px rgba(221,221,221,0.11),
+    0 0 25px rgba(221,221,221,0.08);
+    transform: translateY(-10px);
+}
+
+.goodp-heading {
+    font-size: clamp(.9rem, 1vw + .25rem, 1.5rem);
+    margin: 0.4rem 0 0.2rem 0;
+    font-weight: 600;
+    color: #fff;
+}
+
+.goodp-img-text {
+    margin: 1rem 0 0 0;
+    font-size: clamp(1rem, 1vw + .1rem, 1.25rem);
+    font-weight: 400;
+    color: #e8e8e8;
+    line-height: 1.2;
+    flex-wrap: wrap;
+}
+
+.goodp-sub.spacer { margin-top: .75rem; }
+
+
+/* ---------- FAQ ---------- */
 .faq-section {
-  margin: 0;
+  margin: 2rem;
   text-align: center;
-  /* background: radial-gradient(circle, #677b9cff, #cbccccff); */
-  align-items: center;
-  position: relative;
-  overflow: hidden;
+  max-height: 100%;
+}
+
+.faq-section h2 {
+    color: rgb(212, 233, 255);
 }
 
 .faq-header {
   color: white;
-  font-size: 40px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: clamp(1rem, 5vw, 4rem);
   font-weight: 500;
-  position: relative;
+  margin-bottom: 0.5rem;
 }
 
-
-.faq-questions-section{
+.faq-questions {
   display: flex;
-  flex-direction: row;
-  position: relative;
-  justify-content: center;
-  align-items: center;
-  top: 100px;
-  /* background-color: rgba(22, 141, 61, 0.5); */
-}
-/* ========== FAQ BUTTONS ========== */
-
-/*use this for expanded*/
-
-.faq-row.expanded::before,
-.faq-row::before
-{
-  position: relative;
-  content: "";
-  inset: 0;
-}
-
-.faq-row.expanded,
-.faq-row
-{
-  height: 200px;
-}
-
-
-.faq-row {
-  display: flex;
-  justify-content: top;
-  align-items: center;
   flex-direction: column;
-  height: 50px;
-  position: relative;
-  top: 0px;
-  width: 1200px;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  width: 100%;
+}
+
+.faq-row, .faq-row span {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   overflow: hidden;
-  /* background-color: rgba(0, 0, 1,0.5); */
-  /* border: solid; */
-  transition: height 1s ease;
+  margin: 0.5rem 0;
+  box-sizing: border-box;
+  text-shadow: 0 5px 8px rgb(2, 2, 2);
 }
 
 .faq-btn {
-  width: 80%;
-  font-size: clamp(.01rem, 1.8vw + 0.350rem, 1.875rem);
-  letter-spacing: clamp(0rem, 1.8vw + 0.05rem, .25rem);
-  background-color: rgb(38, 48, 66);
-  color: white;
-  position: relative;
-  border: 2px solid rgb(47, 54, 59);
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  width: 100%;
+  display: flex;
   align-items: center;
-  transition: 0.2s border;
-  height: 40px;
-  text-align: center;
-  top: 0px;
-  overflow: visible;
+  justify-content: space-between;
+  background-color: rgb(45, 53, 61);
+  border: 2px solid rgb(40,41,44);
+  padding: 1.5rem 1rem;
+  cursor: pointer;
+  color: white;
+  font-size: clamp(1.5rem, 2vw, 3rem);
+  letter-spacing: 0.02em;
+  border-radius: 20px;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, transform 0.08s ease;
+  box-shadow: 0 4px 5px rgb(20, 20, 20);
 }
 
-.default-border {
-  border-color: #3d4a55ff;
-}
-
-.faq-btn:hover {
-  border-color: rgb(123, 126, 75);
-}
-
-/* ========== PLUS ICON ========== */
+.default-border { border-color: rgba(72, 73, 76, 0.215); }
+.faq-btn:hover { border-color: rgba(159, 162, 165, 0.477); transform: translateY(-1px); }
 
 .faq-plus {
-  position: relative;
-  left:93.5%;
-  top: -2.2em;
-  /* background-color: red; */
-  width: 17px;
-  height: 20px;
-  text-align: center;
-  justify-content: center;
-  font-size: clamp(.1rem, 1.8vw + 0.450rem, 1.875rem);
-  cursor: pointer;
+  font-size: clamp(.8rem, 2vw, 1.2rem);
 }
 
-/* ========== FAQ ANSWERS ========== */
+.faq-answer-wrap {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  margin-top: 0.5rem;
+  height: 0;
+  transition: height 0.35s ease;
+  box-sizing: border-box;
+}
 
 .faq-answer {
-  background-color: rgb(40, 51, 61);
-  position: relative;
-  margin: 0px;
-  font-size: clamp(.01rem, 1.8vw + 0.469rem, 1.50rem);
-  font-weight: 450;
-  color: white;
-  letter-spacing: 0px;
-  padding: 0px;
-  /* overflow: auto; */
-  text-align: center;
-  width: 79%;
-  height: 170px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: rgba(45, 53, 61, 0.623);
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-size: clamp(1.5rem, 1.8vw, 2rem);
+    font-weight: 450;
+    border-radius: 6px;
+    line-height: 1.3;
+    box-sizing: border-box;
+    overflow-y: auto;
 }

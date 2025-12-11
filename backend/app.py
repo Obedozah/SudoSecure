@@ -6,8 +6,12 @@ import hashlib
 import requests
 
 app = Flask(__name__)
-FRONTEND_URL = os.getenv("FRONTEND_URL", "http://localhost:3000")
-CORS(app, resources={r"/*": {"origins": FRONTEND_URL}})
+allowed_origins = [
+    "http://localhost:3000",
+    os.getenv("FRONTEND_URL")
+]
+
+CORS(app, resources={r"/*": {"origins": allowed_origins}})
 
 HIBP_API_URL = "https://api.pwnedpasswords.com/range/"
 
@@ -33,7 +37,6 @@ def check_pwned_password(password):
 def check_password():
     data = request.get_json()
     password = data.get('password')
-    print(f"Received password for checking: {password}")
     result = zxcvbn(password)
 
     #saving password details to variables

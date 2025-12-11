@@ -2,30 +2,32 @@
 
 .input-section {
     border-radius: 40px;
-    padding: 0.75rem 2rem;
+    padding: 2rem 2rem;
     width: 100%;
     
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 0.5rem;
+    gap: 1rem;
     box-sizing: border-box;
+    box-shadow: 0 4px 5px black;
 
     background-color: #2a2a2a96;
-
     font-size: clamp(2rem, 2vw + 0.5rem, 3rem);
 }
 
 .input {
+    flex: 1;
     border-style: solid;
     border-color: rgb(55, 55, 55);
     border-width: 2px;
     border-radius: 40px;
-    padding: 1.5rem 1.5rem;
-    width: 100%;
+    padding: clamp(2rem, 15vh, 2.5rem);
+    width: 90%;
     height: 100%;
-    text-shadow: 0 4px 12px rgb(50, 50, 50);
+    text-shadow: 0 4px 3px rgb(51, 47, 47);
+    box-shadow: 0 4px 5px rgb(35, 33, 33);
 
     background-color: #f5f7f927;
     cursor: pointer;
@@ -37,8 +39,8 @@
 }
 
 .input:hover {
-    border-color: rgb(77, 104, 139);
-    box-shadow: 0 0 10px #4f5b6d;
+    border-color: rgb(134, 144, 157);
+    box-shadow: 0 0 10px #101111;
 }
 
 .input:focus {
@@ -55,11 +57,11 @@
 }
 
 .show-image {
-    height: 0.7em;
+    height: 3rem;
     width: auto;
-    
 }
 
 .show-image:hover {
     transform: scale(1.15);
+    cursor: pointer;
 }
