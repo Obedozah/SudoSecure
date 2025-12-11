@@ -9,8 +9,6 @@ app = Flask(__name__)
 FRONTEND_URL = os.getenv("FRONTEND_URL", "http://localhost:3000")
 CORS(app, resources={r"/*": {"origins": FRONTEND_URL}})
 
-
-HIBP_API_URL = os.getenv("HIBP_API_URL", "https://api.pwnedpasswords.com/range/")
 HIBP_API_URL = "https://api.pwnedpasswords.com/range/"
 
 def check_pwned_password(password):
